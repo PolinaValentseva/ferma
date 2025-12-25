@@ -1,0 +1,584 @@
+<!doctype html>
+<html lang="ru">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport"
+    content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Жили Были | О ферме</title>
+  <link rel="stylesheet" href="./node_modules/swiper/swiper-bundle.min.css">
+  <link rel="stylesheet" href="./styles/main.css" />
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js" defer></script>
+  <script src="scripts/main.js" type="module"></script>
+</head>
+
+<body>
+  <header class="header header__products" data-js-header>
+    <div class="header__body header__body-products">
+      <div class="header__body-inner container">
+        <a class="header__logo logo" href="/" aria-label="Главная" title="Главная">
+          <img class="logo__image" src="./images/logo.svg" alt="" width="130" height="60" />
+        </a>
+        <div class="header__overlay" data-js-header-overlay>
+          <nav class="header__menu">
+            <ul class="header__menu-list">
+              <a class="header__menu-link" href="products.html">
+                Продукция
+              </a>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="about.html">О ферме</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="/">Как заказать</a>
+              </li>
+              <li class="header__menu-item">
+                <a class="header__menu-link" href="contacts.html">Контакты</a>
+              </li>
+            </ul>
+          </nav>
+
+          <div class="header__nav-right">
+            <button class="header__button-search" type="button" aria-label="Open search" title="Open search">
+              <svg width="15" height="15" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M14.8611 14.2008L10.7151 10.0524C11.6314 8.98822 12.1869 7.60541 12.1869 6.09369C12.1869 2.73274 9.4541 0 6.09345 0C2.73264 0.000110133 0 2.73302 0 6.09369C0 9.45463 2.73281 12.1874 6.09345 12.1874C7.60517 12.1874 8.98793 11.6318 10.052 10.7155L14.198 14.8617C14.2917 14.9531 14.4111 15 14.5306 15C14.6502 15 14.7696 14.9531 14.8611 14.8617C15.0463 14.6788 15.0463 14.3837 14.8611 14.2008L14.8611 14.2008ZM6.09308 11.2501C3.25021 11.2501 0.936827 8.93676 0.936827 6.09369C0.936827 3.25042 3.25012 0.93723 6.09308 0.93723C8.93596 0.93723 11.2493 3.25062 11.2493 6.09369C11.2495 8.93639 8.93616 11.2501 6.09308 11.2501Z"
+                  fill="white" />
+              </svg>
+              <span>Поиск</span>
+            </button>
+            <a class="header__button-cart-02" href="cart.html">
+              <svg width="16px" height="16px" viewBox="0 0 16 16" class="bi bi-basket" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" d="M5.757 1.071a.5.5 0 0 1 .172.686L3.383 6h9.234L10.07 1.757a.5.5 0 1 1 .858-.514L13.783 6H15a1 1 0 0 1 1 1v1a1 1 0 0 1-1 1v4.5a2.5 2.5 0 0 1-2.5 2.5h-9A2.5 2.5 0 0 1 1 13.5V9a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h1.217L5.07 1.243a.5.5 0 0 1 .686-.172zM2 9v4.5A1.5 1.5 0 0 0 3.5 15h9a1.5 1.5 0 0 0 1.5-1.5V9H2zM1 7v1h14V7H1zm3 3a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 4 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 6 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3A.5.5 0 0 1 8 10zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5zm2 0a.5.5 0 0 1 .5.5v3a.5.5 0 0 1-1 0v-3a.5.5 0 0 1 .5-.5z"/>
+              </svg>
+              <span>Корзина</span>
+            </a>
+            <a class="header__button-profile" href="profile.html">
+              <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 229.99 229.99"><defs><style>.cls-1{fill:#FFF;}</style></defs><g id="Calque_2" data-name="Calque 2"><g id="Calque_1-2" data-name="Calque 1"><path class="cls-1" d="M115,15A100.11,100.11,0,0,1,215,115,98.89,98.89,0,0,1,203.7,161.2a101.14,101.14,0,0,1-30.14,34.86,100,100,0,0,1-117.12,0A101.06,101.06,0,0,1,26.29,161.2,98.89,98.89,0,0,1,15,115,100.11,100.11,0,0,1,115,15m0-15A115,115,0,1,0,230,115,115,115,0,0,0,115,0Z"/><path class="cls-1" d="M122.27,145.08a45.14,45.14,0,0,1,45.08,45.09v10a100.12,100.12,0,0,1-104.71,0v-10a45.14,45.14,0,0,1,45.08-45.09h14.55m0-15H107.72a60.08,60.08,0,0,0-60.08,60.09v18a115,115,0,0,0,134.71,0v-18a60.08,60.08,0,0,0-60.08-60.09Z"/><path class="cls-1" d="M115,73.31A18.82,18.82,0,1,1,96.18,92.12,18.83,18.83,0,0,1,115,73.31m0-15a33.82,33.82,0,1,0,33.81,33.81A33.82,33.82,0,0,0,115,58.31Z"/></g></g>
+              </svg>
+              <span>Профиль</span>
+            </a>
+          </div>
+
+        </div>
+
+        <button class="header__burger-button burger-button visible-tablet" type="button" aria-label="Open menu"
+          title="Open menu" data-js-header-burger-button>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+          <span class="burger-button__line"></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <main>
+    <section class="about-hero" aria-labelledby="about-welcome-title" data-aos-duration="300">
+        <div class="about-hero-inner container">
+            <img
+                class="about-hero__image"
+                src="images/about-hero/about-hero__image.jpg"
+                alt=""
+                width="491" height="604" loading="lazy"
+            >
+            <div class="about-hero__info">
+                <div class="about-hero__title-main-wrapper">
+                    <h1 class="about-hero__title-main" data-aos="fade-down" data-aos-duration="300">Здравствуй!</h1>
+                    <p class="about-hero__subtitle subtitle" data-aos="fade-down" data-aos-duration="300">О нас по‑простому и по‑своему</p>
+                </div>
+                <div class="about-hero__title-child-wrapper" data-aos="fade-up-left" data-aos-delay="200" data-aos-duration="600">
+                    <h2 class="about-hero__title-child" id="about-hero-title">Кто мы <span class="about-hero__title-child-accent">Наше видение</span> Наша миссия</h2>
+                </div>
+                <div class="about-hero__description">
+                    <p>
+                        Не торопим природу, не травим поле химией, а бережно заботимся о земле. Даём ей отдыхать, растим не спеша, с полным уважением к каждому ростку.   
+                    </p>
+                    <p>
+                        Не торопим природу, не травим поле химией, а бережно заботимся о земле. Даём ей отдыхать, растим не спеша, с полным уважением к каждому ростку. 
+                    </p>
+                </div>
+            </div>
+        </div>
+    </section>
+    <section class="about-welcome" aria-labelledby="about-hero-title">
+        <div class="about-welcome-inner container">
+            <h2 class="about-welcome__title visually-hidden" id="about-welcome-title">Приглашение</h2>
+            <img
+                class="about-welcome__illustration-top-right"
+                src="images/about-welcome/about-welcome__illustration-top-right.png"
+                alt=""
+                width="270" height="245" loading="lazy"
+            >
+            <div class="about-welcome__decorations-bg-wrapper" data-aos="zoom-in" data-aos-offset="200">
+                <img
+                    class="about-welcome__decorations-bg"
+                    src="images/about-welcome/about-welcome__decoration-bg.png"
+                    alt=""
+                    width="597" height="363" loading="lazy"
+                >
+                <p class="about-welcome__body">
+                    Мы приглашаем: заходите в лавку, приходите на экскурсию или просто берите еду с доверием — как от доброй соседки, что печёт хлеб по старой привычке.
+                </p>
+            </div>
+        </div>
+    </section>
+    <section class="vision" aria-labelledby="vision-title">
+        <div class="vision-inner container">
+            <div class="vision__body">
+                <div class="vision__title-wrapper" data-aos="fade-up" data-aos-offset="200">
+                    <p class="vision__subtitle subtitle">Бережное хозяйство</p>
+                    <h2 class="vision__title" id="vision-title">Наше видение</h2>
+                    <p class="vision__subtitle-child subtitle">Наше слово — ясный учёт и движение, а не выдуманный идеал.</p>
+                </div>
+                <div class="vision__description" data-aos="fade-up" data-aos-delay="100" data-aos-offset="150">
+                    <p>Мы не верим в «быстро-дёшево-много».Верим в «медленно-добро-настоящее».</p>
+                    <p>
+                        Хотим, чтоб мир был ближе к земле: меньше пустого шуму — больше дела. Чтоб каждая банка несла в себе рассказ, каждая лопатка — заботу, а каждое утро на ферме было началом доброго дня для всех. 
+                    </p>
+                </div>
+                <div class="vision__extra" data-aos="fade-up" data-aos-delay="150" data-aos-offset="100">
+                    <svg width="18" height="24" viewBox="0 0 18 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                      <path fill-rule="evenodd" clip-rule="evenodd" d="M6.03367 16.8156C4.12011 15.2663 1.90261 14.4006 0.414177 14.0699L-7.00211e-07 16.019C1.24753 16.2961 3.17956 17.0489 4.82275 18.3793C6.45168 19.6981 7.73842 21.5309 7.89775 24L9.84627 24C9.84627 22.2674 11.3074 17.7274 18 16.0118L17.5256 14.0771C13.7249 15.0515 11.3081 16.8706 9.84627 18.7777L9.84627 4.30394e-07L7.89564 3.45129e-07L7.89564 18.7114C7.33885 17.9863 6.70128 17.3561 6.03367 16.8156Z" fill="#8F323A" />
+                    </svg>
+                    <p>Загляни, как у нас тут жизнь кипит!</p>
+                </div>
+            </div>
+            <div class="vision__gallery">
+                <ul class="vision__gallery-list">
+                    <li class="vision__gallery-card">
+                         <img
+                            class="vision__gallery-image"
+                            src="images/vision/gallery/burenka.jpg"
+                            alt="Корова Бурёнка"
+                            width="217" height="222" loading="lazy"
+                         >
+                         <p class="vision__gallery-name">Бурёнка</p>
+                    </li>
+                    <li class="vision__gallery-card">
+                         <img
+                            class="vision__gallery-image"
+                            src="images/vision/gallery/funtik.jpg"
+                            alt="Поросёнок Фунтик"
+                            width="217" height="222" loading="lazy"
+                         >
+                         <p class="vision__gallery-name">Фунтик</p>
+                    </li>
+                    <li class="vision__gallery-card">
+                         <img
+                            class="vision__gallery-image"
+                            src="images/vision/gallery/ded.jpg"
+                            alt="Козёл Дед"
+                            width="217" height="222" loading="lazy"
+                         >
+                         <p class="vision__gallery-name">Дед</p>
+                    </li>
+                    <li class="vision__gallery-card">
+                         <img
+                            class="vision__gallery-image"
+                            src="images/vision/gallery/ryaba.jpg"
+                            alt="Курочка Ряба"
+                            width="217" height="222" loading="lazy"
+                         >
+                         <p class="vision__gallery-name">Ряба</p>
+                    </li>
+                    <li class="vision__gallery-card">
+                         <img
+                            class="vision__gallery-image"
+                            src="images/vision/gallery/djordg.jpg"
+                            alt="Кролик Джордж"
+                            width="217" height="222" loading="lazy"
+                         >
+                         <p class="vision__gallery-name">Джордж</p>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </section> 
+    <section class="mission" aria-labelledby="mission-title">
+      <div class="mission-inner container">
+        <div class="mission__header">
+          <div class="mission__header-body">
+            <p class="mission__subtitle subtitle" data-aos="fade-right" data-aos-offset="100">Бережное хозяйство</p>
+            <h2 class="mission__title" id="mission-title" data-aos="fade-right" data-aos-offset="100">Наша миссия</h2>
+            <p class="mission__subtitle-child subtitle" data-aos="fade-right" data-aos-offset="100">
+              Идём вместе к честной еде, живой земле и доброму столу
+            </p>
+            <p class="mission__description" data-aos="fade-right">
+              Мы растим по‑сезону: меньше химии — больше заботы. Наша цель: восстанавливать почву, заботиться о животных и давать вам продукты, которым можно доверять как родной маме.
+            </p>
+          </div>
+          <div class="mission__header-images-wrapper">
+            <img
+              class="mission__header-image-main"
+              src="images/mission/mission-header-image-main.jpg"
+              alt=""
+              width="319" height="360" loading="lazy"
+            >
+            <img
+              class="mission__header-image-child"
+              src="images/mission/mission-header-image-child.jpg"
+              alt=""
+              width="199" height="266" loading="lazy"
+            >
+          </div>
+        </div>
+        <div class="mission__body">
+          <img
+            class="mission__body-image"
+            src="images/mission/mission-body-image.jpg"
+            alt=""
+            width="388" height="479" loading="lazy"
+          >
+          <div class="mission__missions">
+            <p class="mission__missions-subtitle subtitle">МЫ СЛЕДУЕМ ЧЕТЫРЁМ ЗАПОВЕДЯМ:</p>
+            <ul class="mission__missions-list">
+              <li class="mission__missions-item">
+                <p data-aos="fade-down" ><span class="mission__missions-item-accent">1</span> Сохранять и восстанавливать почву</p>
+              </li>
+              <li class="mission__missions-item">
+                <p data-aos="fade-down" data-aos-delay="100"><span class="mission__missions-item-accent">2</span> Давать честный продукт</p>
+              </li>
+              <li class="mission__missions-item">
+                <p data-aos="fade-down" data-aos-delay="150"><span class="mission__missions-item-accent">3</span> Учить и собирать людей вместе</p>
+              </li>
+              <li class="mission__missions-item">
+                <p data-aos="fade-down" data-aos-delay="200"><span class="mission__missions-item-accent">4</span> Жить без лишних отходов и с умом</p>
+              </li>
+            </ul>
+            <span class="mission__missions-extra">ИП,ЖилиБыли.</span>
+          </div>
+        </div>
+      </div>
+    </section>
+    <section class="goodbye">
+      <div class="goodbye-inner container">
+        <h2 class="goodbye__title">До новых встреч!</h2>
+        <img
+          class="goodbye__image"
+          src="images/vision/goodbye-ferma-image.png"
+          alt=""
+          width="855" height="329" loading="lazy"
+        >
+        <p class="goodbye__description">Мы верим, что вместе, шаг за шагом, сможем вершить дело доброе</p>
+      </div>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="footer-inner container">
+      <div class="footer__body">
+        <div class="footer__subscribe">
+          <h3 class="footer__subscribe-title">Подпишись на добрые вести и получи скидку на первый заказ!</h3>
+          <form class="footer__subscribe-form" id="subscribe-form">
+            <input class="footer__subscribe-input" type="email" name="email" placeholder="Ваша почта" required
+              aria-label="Ваша почта">
+            <button class="footer__subscribe-button" type="submit">
+              Я В ДЕЛЕ
+            </button>
+          </form>
+          <div class="footer__extra">
+            <div class="footer__extra-info">
+              <a class="footer__extra-logo logo" href="/" aria-label="Home" title="Home">
+                <img class="logo__image" src="./images/logo.svg" alt="" width="98" height="60" />
+              </a>
+              <p class="footer__extra-copyright">Ферма "Жили Были" 2025 © Все права защищены.</p>
+            </div>
+            <a class="footer__extra-button" href="#about-hero-title">
+              <svg width="12" height="15" viewBox="0 0 12 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path fill-rule="evenodd" clip-rule="evenodd"
+                  d="M7.97755 4.49025C9.25326 5.45857 10.7316 5.99962 11.7239 6.2063L12 4.98814C11.1683 4.81491 9.88029 4.34446 8.78484 3.51295C7.69888 2.68866 6.84105 1.54317 6.73483 -1.6772e-06L5.43582 -1.62042e-06C5.43582 1.08285 4.46174 3.92035 5.16239e-07 4.99264L0.316245 6.2018C2.85009 5.59284 4.46124 4.45585 5.43582 3.26396L5.43582 15L6.73624 15L6.73624 3.30535C7.10744 3.75856 7.53248 4.15241 7.97755 4.49025Z"
+                  fill="white" />
+              </svg>
+              <span>UP</span>
+            </a>
+          </div>
+        </div>
+
+        <div class="footer__menu">
+
+          <div class="footer__menu-column">
+            <h3 class="footer__menu-title">О НАС</h3>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Наши продукты</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">О ферме</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Наши ценности</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Рецепты</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Вопросы-ответы</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Контакты</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-column">
+            <h3 class="footer__menu-title">МЫ В СЕТЯХ</h3>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Instagram</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Facebook</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Pinterest</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-column">
+            <h3 class="footer__menu-title">ПОМОЩЬ</h3>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Условия покупки</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Конфиденциальность</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Доставка и оплата</a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">Отследить заказ</a>
+              </li>
+            </ul>
+          </div>
+
+          <div class="footer__menu-column">
+            <h3 class="footer__menu-title">ОПЛАТА</h3>
+            <ul class="footer__menu-list">
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">
+                  <svg width="59" height="15" viewBox="0 0 59 15" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_49357)">
+                      <path
+                        d="M21.9871 3.30371H18.7331C18.5104 3.30371 18.321 3.47014 18.2863 3.6963L16.9702 12.2808C16.944 12.4502 17.0716 12.6029 17.2386 12.6029H18.7921C19.0148 12.6029 19.2041 12.4365 19.2389 12.2099L19.5938 9.89448C19.6281 9.66784 19.8179 9.5014 20.0401 9.5014H21.0702C23.2137 9.5014 24.4508 8.43427 24.7739 6.31958C24.9195 5.39441 24.7801 4.66749 24.359 4.1584C23.8965 3.59938 23.0762 3.30371 21.9871 3.30371ZM22.3625 6.43903C22.1846 7.64028 21.2924 7.64028 20.4298 7.64028H19.9388L20.2833 5.39686C20.3037 5.26126 20.4179 5.1614 20.5511 5.1614H20.7762C21.3638 5.1614 21.9181 5.1614 22.2046 5.50602C22.3754 5.71161 22.4277 6.01707 22.3625 6.43903Z"
+                        fill="white" />
+                      <path
+                        d="M10.3505 3.50055C10.2605 3.47362 10.1677 3.44915 10.0726 3.42712C9.97695 3.40558 9.87893 3.38649 9.77806 3.36985C9.42501 3.31111 9.03818 3.2832 8.62375 3.2832H5.12563C5.0395 3.2832 4.95767 3.30327 4.88439 3.3395C4.72309 3.41929 4.60319 3.57642 4.57417 3.7688L3.83001 8.61789L3.80859 8.75936C3.8576 8.4402 4.12263 8.20523 4.43713 8.20523H5.74655C8.31829 8.20523 10.3319 7.13076 10.9205 4.02236C10.9381 3.93034 10.9528 3.84076 10.9662 3.75313C10.8172 3.67187 10.6559 3.60236 10.4823 3.54313C10.4394 3.52845 10.3952 3.51425 10.3505 3.50055Z"
+                        fill="white" />
+                      <path
+                        d="M31.714 6.40028H30.1557C30.023 6.40028 29.9083 6.50014 29.8878 6.63574L29.8188 7.08413L29.7099 6.92161C29.3725 6.4179 28.6203 6.24951 27.8695 6.24951C26.1475 6.24951 24.6768 7.59126 24.3904 9.47343C24.2414 10.4123 24.4532 11.3101 24.9708 11.9362C25.4457 12.5118 26.1252 12.7517 26.9336 12.7517C28.321 12.7517 29.0904 11.8338 29.0904 11.8338L29.0209 12.2793C28.9947 12.4497 29.1223 12.6024 29.2883 12.6024H30.6919C30.9151 12.6024 31.1035 12.4359 31.1387 12.2093L31.9809 6.72238C32.0075 6.5535 31.8805 6.40028 31.714 6.40028ZM29.5419 9.52042C29.3916 10.4363 28.685 11.0511 27.7838 11.0511C27.3313 11.0511 26.9697 10.9018 26.7375 10.6189C26.5072 10.3379 26.4197 9.93797 26.493 9.49252C26.6333 8.58448 27.3518 7.94958 28.2392 7.94958C28.6817 7.94958 29.0414 8.10084 29.2783 8.38622C29.5158 8.67455 29.61 9.07692 29.5419 9.52042Z"
+                        fill="white" />
+                      <path
+                        d="M40.0141 6.40039H38.4482C38.2988 6.40039 38.1584 6.47675 38.0737 6.60452L35.914 9.87738L34.9986 6.73228C34.941 6.5355 34.7645 6.40039 34.5646 6.40039H33.0259C32.8389 6.40039 32.709 6.58836 32.7685 6.76948L34.4933 11.9769L32.8717 14.3319C32.7442 14.5175 32.8727 14.7725 33.093 14.7725H34.657C34.8054 14.7725 34.9443 14.6981 35.0286 14.5728L40.2367 6.8385C40.3614 6.65347 40.2334 6.40039 40.0141 6.40039Z"
+                        fill="white" />
+                      <path
+                        d="M45.1981 3.30371H41.9435C41.7213 3.30371 41.532 3.47014 41.4972 3.6963L40.1812 12.2808C40.155 12.4502 40.2825 12.6029 40.4486 12.6029H42.1186C42.2737 12.6029 42.4065 12.4864 42.4308 12.3278L42.8043 9.89448C42.8385 9.66784 43.0284 9.5014 43.2506 9.5014H44.2802C46.4242 9.5014 47.6608 8.43427 47.9844 6.31958C48.1305 5.39441 47.9901 4.66749 47.569 4.1584C47.107 3.59938 46.2872 3.30371 45.1981 3.30371ZM45.5735 6.43903C45.396 7.64028 44.5039 7.64028 43.6407 7.64028H43.1502L43.4951 5.39686C43.5156 5.26126 43.6288 5.1614 43.7625 5.1614H43.9876C44.5747 5.1614 45.1295 5.1614 45.416 5.50602C45.5868 5.71161 45.6387 6.01707 45.5735 6.43903Z"
+                        fill="white" />
+                      <path
+                        d="M54.9248 6.40028H53.3675C53.2338 6.40028 53.1201 6.50014 53.1001 6.63574L53.0311 7.08413L52.9217 6.92161C52.5843 6.4179 51.8326 6.24951 51.0817 6.24951C49.3598 6.24951 47.8896 7.59126 47.6031 9.47343C47.4547 10.4123 47.6655 11.3101 48.1831 11.9362C48.6589 12.5118 49.3374 12.7517 50.1458 12.7517C51.5333 12.7517 52.3027 11.8338 52.3027 11.8338L52.2332 12.2793C52.207 12.4497 52.3345 12.6024 52.5016 12.6024H53.9047C54.1269 12.6024 54.3163 12.4359 54.351 12.2093L55.1937 6.72238C55.2194 6.5535 55.0918 6.40028 54.9248 6.40028ZM52.7528 9.52042C52.6034 10.4363 51.8959 11.0511 50.9947 11.0511C50.5431 11.0511 50.1806 10.9018 49.9484 10.6189C49.7181 10.3379 49.6315 9.93797 49.7038 9.49252C49.8451 8.58448 50.5626 7.94958 51.45 7.94958C51.8925 7.94958 52.2522 8.10084 52.4892 8.38622C52.7276 8.67455 52.8218 9.07692 52.7528 9.52042Z"
+                        fill="white" />
+                      <path
+                        d="M56.7609 3.53917L55.4253 12.2808C55.3991 12.4502 55.5266 12.6029 55.6927 12.6029H57.0354C57.2586 12.6029 57.4479 12.4365 57.4822 12.2099L58.7992 3.62581C58.8254 3.45644 58.6979 3.30322 58.5318 3.30322H57.0283C56.8955 3.30371 56.7813 3.40357 56.7609 3.53917Z"
+                        fill="white" />
+                      <path
+                        d="M3.45629 14.2712L3.70513 12.645L3.15082 12.6318H0.503906L2.34337 0.63241C2.34908 0.596186 2.36764 0.56241 2.39476 0.538423C2.42188 0.514437 2.45662 0.501221 2.49278 0.501221H6.95584C8.4375 0.501221 9.46001 0.818423 9.99387 1.44451C10.2441 1.73821 10.4035 2.04514 10.4806 2.3829C10.5615 2.7373 10.5629 3.16073 10.4839 3.67716L10.4782 3.71486V4.04577L10.7285 4.19164C10.9393 4.30668 11.1068 4.43835 11.2352 4.58912C11.4494 4.84024 11.5878 5.1594 11.6463 5.53779C11.7068 5.92695 11.6868 6.39003 11.5878 6.9143C11.4736 7.51737 11.289 8.04262 11.0397 8.47241C10.8103 8.86842 10.5182 9.19689 10.1713 9.45143C9.84018 9.69325 9.44669 9.87681 9.00181 9.9943C8.57073 10.1098 8.07922 10.1681 7.54013 10.1681H7.19279C6.94442 10.1681 6.70319 10.2601 6.51382 10.4251C6.32397 10.5935 6.19836 10.8235 6.15982 11.0751L6.13365 11.2215L5.694 14.0876L5.67402 14.1928C5.66879 14.2261 5.65975 14.2428 5.64642 14.254C5.63453 14.2643 5.6174 14.2712 5.60074 14.2712H3.45629Z"
+                        fill="white" />
+                      <path
+                        d="M11.2881 4.66528C11.6611 5.16489 11.7691 5.9022 11.5771 6.91626C11.338 8.17949 10.8228 8.97058 10.1602 9.45532C9.48843 9.9466 8.60262 10.1692 7.54199 10.1692H7.19434C6.6956 10.1693 6.28163 10.517 6.16699 10.9836L6.15039 11.0667L6.12207 11.2229L6.12012 11.2356L5.68555 14.0735L5.66309 14.1946L5.66113 14.2024L5.66016 14.2112C5.65283 14.2571 5.62011 14.2717 5.60254 14.2717H3.4707L3.63379 13.2092L4.30371 8.83521C4.31718 8.74765 4.38317 8.70532 4.43848 8.70532H5.74805C7.09798 8.70527 8.36052 8.42337 9.37305 7.68286C10.2774 7.02146 10.9325 6.02932 11.2881 4.66528Z"
+                        fill="white" stroke="#DDDDDD" />
+                      <path
+                        d="M4.5744 3.76874C4.60342 3.57636 4.72332 3.41923 4.88462 3.33993C4.95837 3.30371 5.03974 3.28364 5.12586 3.28364H8.62399C9.03841 3.28364 9.42524 3.31154 9.77829 3.37028C9.87916 3.38692 9.97718 3.40601 10.0728 3.42755C10.168 3.44958 10.2608 3.47406 10.3507 3.50098C10.3954 3.51469 10.4397 3.52888 10.483 3.54308C10.6566 3.60231 10.8179 3.67231 10.9669 3.75308C11.142 2.6042 10.9654 1.82196 10.3616 1.11364C9.69598 0.333846 8.49457 0 6.95724 0H2.49417C2.18014 0 1.91226 0.234965 1.86373 0.554615L0.00475275 12.6773C-0.0318843 12.9172 0.14797 13.1336 0.383019 13.1336H3.13841L3.83024 8.61783L4.5744 3.76874Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_49357">
+                        <rect width="59" height="15" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">
+                  <svg width="26" height="20" viewBox="0 0 26 20" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <path
+                      d="M8.04004 2.5C9.57707 2.5 11.0019 2.95932 12.1904 3.73926C10.5106 5.28366 9.44044 7.49526 9.44043 9.96387C9.44043 12.4282 10.5063 14.6558 12.1885 16.1895C11.0003 16.9687 9.57631 17.4277 8.04004 17.4277C3.86749 17.4275 0.5 14.0852 0.5 9.96387C0.500027 5.8426 3.86751 2.50021 8.04004 2.5Z"
+                      stroke="white" />
+                    <path
+                      d="M17.957 2.5C22.1315 2.50004 25.5 5.86485 25.5 9.96387C25.5 14.0852 22.1325 17.4275 17.96 17.4277C16.4234 17.4277 14.9989 16.969 13.8105 16.1895C15.5086 14.6415 16.5596 12.4311 16.5596 9.96387C16.5596 7.49451 15.4883 5.28274 13.8076 3.73828C14.9943 2.95832 16.4197 2.5 17.957 2.5Z"
+                      stroke="white" />
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">
+                  <svg width="34" height="11" viewBox="0 0 34 11" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_49376)">
+                      <path
+                        d="M17.584 3.50235C17.5646 5.0285 18.947 5.8802 19.9883 6.38654C21.0583 6.90612 21.4177 7.23927 21.4136 7.70384C21.4054 8.41495 20.5601 8.72874 19.7688 8.74096C18.3885 8.76236 17.586 8.36911 16.9479 8.07162L16.4507 10.3934C17.0909 10.6879 18.2762 10.9446 19.5054 10.9558C22.3907 10.9558 24.2784 9.5346 24.2886 7.33096C24.2999 4.53438 20.412 4.37953 20.4386 3.12947C20.4478 2.75048 20.8102 2.34602 21.6045 2.24313C21.9976 2.19117 23.0829 2.15144 24.3131 2.71686L24.796 0.470434C24.1345 0.23 23.284 -0.000246048 22.2253 -0.000246048C19.5095 -0.000246048 17.5993 1.44032 17.584 3.50235ZM29.4363 0.193323C28.9095 0.193323 28.4654 0.499979 28.2673 0.97066L24.1457 10.7908H27.0289L27.6027 9.20859H31.126L31.4588 10.7908H34L31.7825 0.193323H29.4363ZM29.8396 3.05612L30.6717 7.03551H28.3929L29.8396 3.05612ZM14.0882 0.193323L11.8156 10.7908H14.563L16.8346 0.193323H14.0882ZM10.0238 0.193323L7.16407 7.40635L6.00733 1.27324C5.87154 0.588614 5.33554 0.193323 4.74032 0.193323H0.0653414L0 0.500998C0.959702 0.708831 2.05009 1.04401 2.71065 1.40263C3.11495 1.62167 3.23032 1.8132 3.36304 2.3338L5.55402 10.7908H8.45763L12.909 0.193323H10.0238Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_49376">
+                        <rect width="34" height="11" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">
+                  <svg width="37" height="16" viewBox="0 0 37 16" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_49379)">
+                      <path
+                        d="M17.4832 7.5V11.7961H16.0957V1.17139H19.7032C20.582 1.17139 21.4145 1.49475 22.062 2.09527C22.7095 2.6496 23.0332 3.4811 23.0332 4.35879C23.0332 5.23648 22.7095 6.02178 22.062 6.6223C21.4145 7.22283 20.6282 7.54619 19.7032 7.54619L17.4832 7.5ZM17.4832 2.46483V6.16036H19.7957C20.3045 6.16036 20.8132 5.97559 21.137 5.60603C21.877 4.91312 21.877 3.75826 21.1832 3.06535L21.137 3.01916C20.767 2.6496 20.3045 2.41863 19.7957 2.46483H17.4832Z"
+                        fill="white" />
+                      <path
+                        d="M26.2245 4.31299C27.242 4.31299 28.0282 4.59015 28.6295 5.14448C29.2307 5.69882 29.5082 6.43792 29.5082 7.36181V11.7965H28.2132V10.7802H28.167C27.612 11.6117 26.8257 12.0274 25.9007 12.0274C25.1145 12.0274 24.4207 11.7965 23.8657 11.3345C23.357 10.8726 23.0332 10.2258 23.0332 9.53294C23.0332 8.79383 23.3107 8.1933 23.8657 7.73136C24.4207 7.26942 25.207 7.08464 26.132 7.08464C26.9645 7.08464 27.612 7.22322 28.1207 7.54658V7.22322C28.1207 6.76128 27.9357 6.29934 27.5657 6.02217C27.1957 5.69881 26.7332 5.51404 26.2245 5.51404C25.4382 5.51404 24.837 5.8374 24.4207 6.48412L23.2182 5.74501C23.9582 4.77493 24.9295 4.31299 26.2245 4.31299ZM24.467 9.57913C24.467 9.94868 24.652 10.272 24.9295 10.4568C25.2532 10.6878 25.6232 10.8264 25.9932 10.8264C26.5482 10.8264 27.1032 10.5954 27.5195 10.1797C27.982 9.76391 28.2132 9.25577 28.2132 8.70144C27.797 8.37808 27.1957 8.1933 26.4095 8.1933C25.8545 8.1933 25.392 8.33189 25.022 8.60905C24.652 8.84002 24.467 9.16338 24.467 9.57913Z"
+                        fill="white" />
+                      <path
+                        d="M36.9995 4.5437L32.4208 15.0298H31.0333L32.7445 11.3804L29.7383 4.5899H31.2183L33.392 9.80984H33.4383L35.5658 4.5899H36.9995V4.5437Z"
+                        fill="white" />
+                      <path
+                        d="M11.9792 6.57659C11.9792 6.16084 11.933 5.74509 11.8867 5.32935H6.10547V7.68525H9.38922C9.25047 8.42436 8.83422 9.11727 8.18672 9.53302V11.0574H10.1755C11.3317 9.99496 11.9792 8.42436 11.9792 6.57659Z"
+                        fill="white" />
+                      <path
+                        d="M6.10594 12.5353C7.77094 12.5353 9.15844 11.981 10.1759 11.0571L8.18719 9.53269C7.63219 9.90224 6.93844 10.1332 6.10594 10.1332C4.53344 10.1332 3.14594 9.07074 2.68344 7.59253H0.648438V9.16313C1.71219 11.2419 3.79344 12.5353 6.10594 12.5353Z"
+                        fill="white" />
+                      <path
+                        d="M2.68234 7.59253C2.40484 6.85342 2.40484 6.02192 2.68234 5.23662V3.66602H0.647344C-0.231406 5.3752 -0.231406 7.40775 0.647344 9.16313L2.68234 7.59253Z"
+                        fill="white" />
+                      <path
+                        d="M6.10461 2.74199C6.98336 2.74199 7.81586 3.06535 8.46336 3.66587L10.2209 1.91049C9.11086 0.894218 7.63086 0.293693 6.15086 0.339888C3.83836 0.339888 1.71086 1.63333 0.693359 3.71207L2.72836 5.28267C3.14461 3.80445 4.53211 2.74199 6.10461 2.74199Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_49379">
+                        <rect width="37" height="16" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">
+                  <svg width="35" height="14" viewBox="0 0 35 14" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_49388)">
+                      <path
+                        d="M6.63324 1.77067C7.04056 1.27524 7.3315 0.614672 7.24422 -0.0458984C6.63324 -0.0183747 5.9059 0.339434 5.46949 0.807339C5.09127 1.2202 4.74214 1.90829 4.82942 2.54134C5.52768 2.62391 6.19684 2.2661 6.63324 1.77067ZM7.24422 2.70648C6.25502 2.65143 5.4113 3.22943 4.9458 3.22943C4.48029 3.22943 3.75294 2.734 2.96741 2.734C1.94912 2.76153 1.01811 3.28448 0.494424 4.16524C-0.552958 5.89924 0.203485 8.45895 1.25087 9.86266C1.74546 10.5508 2.35644 11.3214 3.14197 11.2939C3.89841 11.2664 4.18935 10.826 5.09127 10.826C5.99318 10.826 6.25502 11.2939 7.06965 11.2664C7.88428 11.2389 8.40798 10.5783 8.90257 9.86266C9.48445 9.06447 9.7172 8.29381 9.7172 8.26628C9.68811 8.23876 8.11703 7.68828 8.11703 5.98181C8.08794 4.55057 9.33898 3.86248 9.39717 3.83495C8.72801 2.8441 7.62244 2.734 7.24422 2.70648Z"
+                        fill="white" />
+                      <path
+                        d="M15.7974 0.752197C17.9503 0.752197 19.4341 2.15591 19.4341 4.16515C19.4341 6.20191 17.9212 7.60562 15.7392 7.60562H13.3826V11.1562H11.666V0.752197H15.7974ZM13.3826 6.25695H15.3319C16.8156 6.25695 17.6594 5.48629 17.6594 4.19267C17.6594 2.87153 16.8156 2.12839 15.3319 2.12839H13.3535V6.25695H13.3826ZM19.8705 9.03685C19.8705 7.71571 20.947 6.89 22.8672 6.7799L25.0783 6.66981V6.09181C25.0783 5.23857 24.4673 4.74315 23.4782 4.74315C22.5181 4.74315 21.9362 5.18353 21.7907 5.8441H20.2196C20.3069 4.46791 21.558 3.44953 23.5363 3.44953C25.4856 3.44953 26.7367 4.41286 26.7367 5.95419V11.1837H25.1656V9.94514H25.1365C24.671 10.7984 23.6527 11.3213 22.6053 11.3213C20.9761 11.3213 19.8705 10.3855 19.8705 9.03685ZM25.0783 8.34876V7.74324L23.0999 7.85333C22.1107 7.90838 21.558 8.32124 21.558 8.98181C21.558 9.64238 22.1398 10.0828 23.0126 10.0828C24.1764 10.0828 25.0783 9.33962 25.0783 8.34876ZM28.1914 13.9911V12.725C28.3077 12.7526 28.5987 12.7526 28.7151 12.7526C29.4715 12.7526 29.8788 12.4498 30.1407 11.6791C30.1407 11.6516 30.2861 11.2112 30.2861 11.2112L27.3767 3.61467H29.1515L31.188 9.80752H31.2171L33.2537 3.61467H34.9994L32.0027 11.6241C31.3044 13.4682 30.5189 14.0462 28.8605 14.0462C28.7442 14.0187 28.3368 14.0187 28.1914 13.9911Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_49388">
+                        <rect width="35" height="14" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">
+                  <svg width="69" height="13" viewBox="0 0 69 13" fill="currentColor"
+                    xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_49393)">
+                      <path
+                        d="M5.67887 6.36144C5.67887 5.19304 4.8078 4.37186 3.73783 4.37186C2.66784 4.37186 1.79678 5.20688 1.79678 6.36144C1.79678 7.50217 2.66784 8.35107 3.73783 8.35107C4.80888 8.34998 5.67887 7.52985 5.67887 6.36144ZM5.69416 9.83903V8.93473C5.16627 9.56104 4.38046 9.94978 3.43945 9.94978C1.4842 9.94978 0 8.41922 0 6.36144C0 4.31646 1.54103 2.75928 3.48317 2.75928C4.39688 2.75928 5.16739 3.14911 5.69524 3.76047V2.88389H7.4505V9.83903H5.69416Z"
+                        fill="white" />
+                      <path
+                        d="M15.9768 8.29461C15.3626 8.29461 15.1921 8.07198 15.1921 7.48832V4.40056H16.32V2.88388H15.1921V1.18717H13.3931V2.88388H11.0761V2.46103C11.0761 1.87629 11.3045 1.65368 11.933 1.65368H12.3275V0.304199H11.4619C9.97769 0.304199 9.27822 0.777104 9.27822 2.22351V2.88281H8.2793V4.39952H9.27822V9.83792H11.0772V4.39952H13.3942V7.80782C13.3942 9.22654 13.9505 9.83901 15.4063 9.83901H16.3342V8.29461H15.9768Z"
+                        fill="white" />
+                      <path
+                        d="M22.4281 5.73527C22.3002 4.83097 21.5428 4.28883 20.6586 4.28883C19.7733 4.28883 19.0455 4.81714 18.8608 5.73527H22.4281ZM18.8455 6.8206C18.9744 7.84949 19.7307 8.43424 20.6871 8.43424C21.4434 8.43424 22.0292 8.08592 22.3712 7.52994H24.2128C23.7844 9.00406 22.4281 9.94987 20.6445 9.94987C18.4892 9.94987 16.9766 8.47576 16.9766 6.37537C16.9766 4.27499 18.5755 2.7583 20.6881 2.7583C22.815 2.7583 24.356 4.28887 24.356 6.37537C24.356 6.52877 24.3418 6.68108 24.3134 6.8206H18.8455Z"
+                        fill="white" />
+                      <path
+                        d="M35.7933 6.36144C35.7933 5.23455 34.9222 4.37186 33.8522 4.37186C32.7822 4.37186 31.9111 5.20688 31.9111 6.36144C31.9111 7.50217 32.7822 8.35107 33.8522 8.35107C34.9222 8.34998 35.7933 7.48833 35.7933 6.36144ZM30.1406 2.88389H31.8958V3.78816C32.4237 3.14804 33.2085 2.75928 34.1506 2.75928C36.0774 2.75928 37.59 4.30367 37.59 6.3476C37.59 8.39259 36.049 9.95083 34.108 9.95083C33.2085 9.95083 32.4664 9.60255 31.9527 9.01889V12.701H30.1406V2.88389Z"
+                        fill="white" />
+                      <path
+                        d="M43.9171 6.36144C43.9171 5.19304 43.0472 4.37186 41.976 4.37186C40.9061 4.37186 40.035 5.20688 40.035 6.36144C40.035 7.50217 40.9061 8.35107 41.976 8.35107C43.0472 8.34998 43.9171 7.52985 43.9171 6.36144ZM43.9325 9.83903V8.93473C43.4046 9.56104 42.6186 9.94978 41.6776 9.94978C39.7224 9.94978 38.2383 8.41922 38.2383 6.36144C38.2383 4.31646 39.7793 2.75928 41.7204 2.75928C42.634 2.75928 43.4046 3.14911 43.9325 3.76047V2.88389H45.6879V9.83903H43.9325Z"
+                        fill="white" />
+                      <path
+                        d="M26.9759 3.56556C26.9759 3.56556 27.423 2.75928 28.5169 2.75928C28.9847 2.75928 29.2875 2.91584 29.2875 2.91584V4.69031C29.2875 4.69031 28.6273 4.29302 28.0208 4.3729C27.4142 4.45279 27.0306 4.99598 27.0328 5.72239V9.84008H25.2207V2.88496H26.9759V3.56556Z"
+                        fill="white" />
+                      <path
+                        d="M53.8855 2.88403L49.4537 12.6787H47.5849L49.3249 8.89227L46.3828 2.88403H48.501L50.2223 6.8984L51.9884 2.88403H53.8855Z"
+                        fill="white" />
+                      <path
+                        d="M68.0326 2.72634L63.639 0.255306C62.3492 -0.470026 60.7373 0.436376 60.7373 1.88811V2.1416C60.7373 2.3706 60.8628 2.58255 61.0661 2.69652L61.8957 3.16303C62.1393 3.30044 62.4432 3.12895 62.4432 2.85522V2.22468C62.4432 1.90941 62.7931 1.71237 63.0729 1.87L66.8783 4.01086C67.1584 4.16849 67.1584 4.56258 66.8783 4.71917L63.0729 6.86002C62.7931 7.01765 62.4432 6.8206 62.4432 6.50533V6.1698C62.4432 4.71808 60.8312 3.81062 59.5406 4.537L55.147 7.00805C53.8572 7.73341 53.8572 9.54833 55.147 10.2736L59.5406 12.7447C60.83 13.47 62.4432 12.5636 62.4432 11.1119V10.8584C62.4432 10.6294 62.3176 10.4185 62.1144 10.3035L61.2847 9.83588C61.0411 9.6985 60.7373 9.86998 60.7373 10.1437V10.7743C60.7373 11.0895 60.3877 11.2866 60.1076 11.1289L56.3022 8.98807C56.0224 8.83044 56.0224 8.43637 56.3022 8.27874L60.1076 6.13784C60.3877 5.98021 60.7373 6.17726 60.7373 6.49253V6.82806C60.7373 8.27978 62.3492 9.18727 63.639 8.46086L68.0326 5.98981C69.3224 5.26659 69.3224 3.45168 68.0326 2.72634Z"
+                        fill="white" />
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_49393">
+                        <rect width="69" height="13" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+              <li class="footer__menu-item">
+                <a href="/" class="footer__menu-link">
+                  <svg width="49" height="12" viewBox="0 0 49 12" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                    <g clip-path="url(#clip0_1_49403)">
+                      <mask id="mask0_1_49403" style="mask-type:luminance" maskUnits="userSpaceOnUse" x="0" y="0"
+                        width="49" height="13">
+                        <path d="M49 0.00317383H0V12.0004H49V0.00317383Z" fill="white" />
+                      </mask>
+                      <g mask="url(#mask0_1_49403)">
+                        <path
+                          d="M12.5524 3.77448C12.1594 2.93398 11.4144 2.39105 10.2916 2.39105C9.94703 2.39717 9.60842 2.48393 9.3019 2.64457C8.9954 2.80523 8.72915 3.03552 8.52376 3.31768L8.48279 3.36857V0.0744673C8.48279 0.0554296 8.47538 0.0371728 8.46217 0.0237114C8.44896 0.0102497 8.43104 0.00268555 8.41237 0.00268555H6.82498C6.80654 0.00302762 6.78897 0.0107406 6.77604 0.0241653C6.7631 0.03759 6.75586 0.0556536 6.75586 0.0744673V9.52352C6.75586 9.54221 6.76316 9.56012 6.77612 9.57334C6.78908 9.58657 6.80665 9.59399 6.82498 9.59399H8.52504C8.54349 9.59399 8.56121 9.58662 8.57438 9.57342C8.58754 9.56024 8.5951 9.54233 8.59544 9.52352V5.49462C8.59544 4.71156 9.1075 4.15687 9.9268 4.15687C10.8229 4.15687 11.0495 4.90862 11.0495 5.67471V9.52352C11.0495 9.54221 11.0568 9.56012 11.0697 9.57334C11.0827 9.58657 11.1003 9.59399 11.1186 9.59399H12.8148C12.8333 9.59399 12.851 9.58662 12.8642 9.57342C12.8773 9.56024 12.8849 9.54233 12.8853 9.52352V5.44502C12.8853 5.30538 12.8853 5.16833 12.8673 5.03522C12.8382 4.59898 12.7315 4.17177 12.5524 3.77448Z"
+                          fill="white" />
+                        <path
+                          d="M4.06453 5.17495C4.06453 5.17495 3.19914 4.96743 2.88039 4.8839C2.56162 4.80038 2.00476 4.62288 2.00476 4.19349C2.00476 3.76411 2.45409 3.62706 2.90983 3.62706C3.36556 3.62706 3.87251 3.73931 3.91219 4.25483C3.91379 4.27342 3.92218 4.29068 3.93569 4.30327C3.9492 4.31584 3.96686 4.32276 3.98515 4.3227L5.66087 4.31618C5.67073 4.3162 5.68049 4.31415 5.68954 4.31016C5.69859 4.30617 5.70672 4.30031 5.71345 4.29295C5.72019 4.28562 5.72536 4.27693 5.72864 4.26745C5.73192 4.25796 5.73327 4.24789 5.73256 4.23786C5.62887 2.5882 4.20918 1.99829 2.89958 1.99829C1.34676 1.99829 0.211269 3.04238 0.211269 4.19349C0.211269 5.03399 0.444257 5.82229 2.27614 6.37043C2.59747 6.4657 3.034 6.58969 3.41549 6.69802C3.87378 6.82854 4.12085 7.02561 4.12085 7.33622C4.12085 7.69643 3.60879 7.947 3.10569 7.947C2.37729 7.947 1.8601 7.67163 1.81786 7.17698C1.81566 7.15889 1.80702 7.14223 1.79356 7.13019C1.78011 7.11816 1.76279 7.11159 1.74489 7.11173L0.0730125 7.11956C0.0632108 7.11956 0.0535098 7.12156 0.0444857 7.12547C0.0354617 7.12937 0.0273011 7.13508 0.0204907 7.14228C0.0136804 7.14945 0.00835901 7.15797 0.00484629 7.16729C0.00133357 7.17663 -0.000298973 7.18658 4.49472e-05 7.19657C0.076854 8.75357 1.55159 9.59275 2.92648 9.59275C4.97472 9.59275 5.90026 8.41816 5.90026 7.31795C5.90283 6.80111 5.78632 5.6239 4.06453 5.17495Z"
+                          fill="white" />
+                        <path
+                          d="M25.622 2.38858C24.7708 2.38858 24.0576 2.86886 23.5981 3.44835V2.45645C23.5981 2.43798 23.5909 2.42024 23.5782 2.40707C23.5657 2.39389 23.5484 2.38631 23.5302 2.38599H21.9403C21.9221 2.38599 21.9043 2.39339 21.8914 2.40661C21.8785 2.41983 21.8711 2.43777 21.8711 2.45645V11.7228C21.8715 11.7412 21.879 11.7589 21.892 11.7717C21.9049 11.7847 21.9223 11.792 21.9403 11.792H23.6417C23.6596 11.792 23.6768 11.7847 23.6896 11.7717C23.7023 11.7588 23.7094 11.7411 23.7094 11.7228V8.67664H23.7351C24.0051 9.09687 24.7438 9.60066 25.7091 9.60066C27.5242 9.60066 29.0374 8.06584 29.0374 5.99202C29.0388 4.00172 27.5333 2.38858 25.622 2.38858ZM25.4645 7.83484C25.1063 7.84391 24.7532 7.74392 24.4509 7.54764C24.1487 7.35134 23.9104 7.06765 23.7668 6.73278C23.6234 6.39789 23.5809 6.027 23.6452 5.66744C23.7092 5.30788 23.8771 4.97596 24.127 4.71406C24.3771 4.45212 24.6979 4.27208 25.0488 4.19691C25.3995 4.12174 25.7643 4.15482 26.0965 4.29196C26.4289 4.42909 26.7134 4.66405 26.9142 4.96685C27.1149 5.26967 27.2225 5.62655 27.2235 5.99202C27.2272 6.23089 27.1845 6.46818 27.0981 6.69025C27.0117 6.91231 26.883 7.11477 26.7196 7.286C26.5562 7.45723 26.3612 7.59386 26.1457 7.68804C25.9304 7.78224 25.6989 7.83211 25.4645 7.83484Z"
+                          fill="white" />
+                        <path
+                          d="M16.8363 1.98145C15.2502 1.98145 14.459 2.5309 13.824 2.97073L13.8048 2.98377C13.7721 3.00662 13.7491 3.04124 13.7402 3.08068C13.7315 3.12013 13.7376 3.16148 13.7575 3.19651L14.3847 4.29801C14.3965 4.31863 14.4126 4.33635 14.4318 4.34988C14.4511 4.36342 14.473 4.37245 14.4962 4.37633C14.5187 4.38049 14.5419 4.37948 14.564 4.37338C14.5862 4.36728 14.6067 4.35628 14.6242 4.34108L14.674 4.29933C15.0005 4.02003 15.5241 3.64676 16.7914 3.54496C17.4968 3.48756 18.1062 3.67548 18.5554 4.10356C19.0496 4.56819 19.3454 5.31863 19.3454 6.11083C19.3454 7.56866 18.503 8.48483 17.1499 8.50312C16.0348 8.49659 15.2859 7.90406 15.2859 7.02833C15.2859 6.5637 15.492 6.26092 15.8941 5.95813C15.9247 5.93575 15.9464 5.90281 15.9551 5.86538C15.9639 5.82796 15.959 5.78858 15.9414 5.75454L15.3781 4.66867C15.3678 4.64924 15.3537 4.63209 15.3368 4.61821C15.3199 4.60432 15.3004 4.59397 15.2796 4.58776C15.2582 4.58129 15.2359 4.57946 15.2138 4.58237C15.1917 4.58529 15.1705 4.59291 15.1515 4.60474C14.5192 4.98713 13.7434 5.68667 13.7856 7.03095C13.8368 8.74195 15.2322 10.0484 17.0461 10.1019H17.1371H17.2612C19.4169 10.0301 20.9736 8.3987 20.9736 6.18654C20.9736 4.15576 19.5219 1.98145 16.8363 1.98145Z"
+                          fill="white" />
+                        <path
+                          d="M35.7428 3.02539H34.6622C34.637 3.02573 34.6127 3.03615 34.5948 3.05442C34.5767 3.07271 34.5665 3.09741 34.5664 3.12328V5.43463C34.5665 5.46037 34.5768 5.48492 34.5949 5.50299C34.6128 5.52107 34.637 5.53122 34.6622 5.53122H35.7428C36.4008 5.53122 36.886 5.00264 36.886 4.2783C36.886 3.55396 36.4008 3.02539 35.7428 3.02539Z"
+                          fill="white" />
+                        <path
+                          d="M39.0605 7.11435C39.0605 7.44976 39.3383 7.63639 39.8222 7.63639C40.4802 7.63639 40.8692 7.27357 40.8692 6.63014V6.44482L39.8837 6.49703C39.3638 6.52312 39.0605 6.7437 39.0605 7.11435Z"
+                          fill="white" />
+                        <path
+                          d="M47.0619 0.0236932H32.545C32.307 0.0236929 32.071 0.071538 31.8511 0.164492C31.631 0.257446 31.4312 0.39369 31.2629 0.565434C31.0945 0.73718 30.961 0.941062 30.87 1.16543C30.7788 1.3898 30.7322 1.63025 30.7324 1.87305V9.9752C30.7324 10.4655 30.9233 10.9357 31.2633 11.2824C31.6032 11.6292 32.0643 11.8242 32.545 11.8245H47.0619C47.3004 11.8252 47.5367 11.778 47.7572 11.6856C47.9777 11.5931 48.1781 11.4572 48.3471 11.2857C48.5159 11.1141 48.6502 10.9104 48.7419 10.6859C48.8335 10.4615 48.8807 10.2209 48.8811 9.97782V1.87565C48.8815 1.63209 48.8348 1.39082 48.7436 1.16572C48.6523 0.940629 48.5183 0.736149 48.3493 0.56404C48.1803 0.391933 47.9795 0.255594 47.7586 0.162862C47.5377 0.0701289 47.3009 0.0228325 47.0619 0.0236932ZM35.7965 6.44096H34.6547C34.6293 6.44096 34.605 6.45126 34.5868 6.46962C34.5689 6.48798 34.5587 6.51288 34.5587 6.53885V8.19633C34.5587 8.22229 34.5486 8.24719 34.5306 8.26554C34.5126 8.28391 34.4882 8.29422 34.4628 8.29422H33.6587C33.6335 8.29388 33.6091 8.28346 33.5912 8.26516C33.5732 8.2469 33.5632 8.22219 33.5628 8.19633V2.21759C33.5628 2.19165 33.5729 2.16674 33.591 2.14838C33.609 2.13002 33.6333 2.11971 33.6587 2.11971H35.7965C37.0076 2.11971 37.8743 3.01894 37.8743 4.28099C37.8743 5.54304 37.014 6.44356 35.8031 6.44356L35.7965 6.44096ZM41.8133 8.19503C41.8136 8.208 41.8113 8.22085 41.8064 8.23289C41.8016 8.24491 41.7946 8.25587 41.7857 8.26509C41.7767 8.27431 41.7661 8.28165 41.7543 8.28665C41.7427 8.29164 41.73 8.29422 41.7173 8.29422H40.9582C40.9455 8.29422 40.9329 8.29164 40.9212 8.28665C40.9094 8.28165 40.8987 8.27431 40.8898 8.26509C40.881 8.25587 40.8738 8.24491 40.8692 8.23289C40.8644 8.22085 40.862 8.208 40.8623 8.19503V8.01624C40.8634 8.00054 40.8598 7.98484 40.8515 7.97151C40.8434 7.95816 40.8313 7.94785 40.8168 7.94212C40.8025 7.9364 40.7867 7.93558 40.7718 7.93977C40.7567 7.94394 40.7437 7.95291 40.7342 7.96533C40.5076 8.21722 40.1389 8.39993 39.5513 8.39993C38.686 8.39993 38.1136 7.94054 38.1136 7.14702C38.1053 6.95354 38.1445 6.76099 38.2277 6.58685C38.3108 6.41274 38.4354 6.26254 38.59 6.14992C38.9023 5.91108 39.3861 5.7871 40.1043 5.75838L40.8659 5.73228V5.50517C40.8659 5.04708 40.5639 4.85262 40.0786 4.85262C39.5935 4.85262 39.2875 5.02751 39.216 5.31333C39.2102 5.33352 39.1981 5.35117 39.1813 5.36348C39.1647 5.37579 39.1444 5.38201 39.1237 5.38119H38.3723C38.3585 5.38155 38.3447 5.3788 38.332 5.37317C38.3195 5.36753 38.3081 5.35912 38.2989 5.34855C38.2898 5.33796 38.283 5.3255 38.2791 5.31196C38.2752 5.29843 38.2741 5.28421 38.2763 5.27026C38.389 4.5916 38.9394 4.07607 40.1134 4.07607C41.3602 4.07607 41.8095 4.6673 41.8095 5.79622L41.8133 8.19503ZM46.5423 4.31621L44.8525 8.91154C44.4684 9.97911 43.7963 10.2532 43.0602 10.2532C42.9216 10.2567 42.7831 10.2395 42.6493 10.2023C42.6284 10.1966 42.6101 10.184 42.5967 10.1666C42.5837 10.1491 42.5765 10.1277 42.5763 10.1057V9.40748C42.5763 9.39287 42.5794 9.37843 42.5854 9.36519C42.5915 9.35195 42.6003 9.34023 42.6113 9.33089C42.6224 9.32153 42.6352 9.31479 42.6491 9.3111C42.6629 9.30743 42.6774 9.3069 42.6915 9.30959C42.8076 9.33204 42.9254 9.3434 43.0436 9.34354C43.2471 9.35394 43.4482 9.2944 43.6148 9.17442C43.781 9.05444 43.9032 8.88098 43.9614 8.68184L44.0115 8.5213C44.0192 8.49983 44.0192 8.47624 44.0115 8.45474L42.4316 4.31753C42.4268 4.30274 42.4255 4.28698 42.4277 4.27157C42.4301 4.25614 42.4359 4.24148 42.4445 4.22878C42.4535 4.21607 42.4652 4.20567 42.4787 4.1984C42.4922 4.19114 42.5073 4.18723 42.5225 4.18701H43.2907C43.3103 4.18721 43.3294 4.19339 43.3456 4.2048C43.3619 4.21619 43.3744 4.23227 43.3815 4.25097L44.4544 7.16921C44.4615 7.18827 44.474 7.20469 44.4904 7.21628C44.507 7.22788 44.5264 7.23407 44.5465 7.23407C44.5664 7.23407 44.5861 7.22788 44.6025 7.21628C44.6189 7.20469 44.6316 7.18827 44.6386 7.16921L45.5694 4.2588C45.5756 4.23896 45.5879 4.22167 45.6045 4.20946C45.6211 4.19724 45.6409 4.19075 45.6614 4.19094H46.4489C46.464 4.19087 46.4789 4.19448 46.4927 4.2014C46.5062 4.20834 46.5181 4.21843 46.5272 4.23087C46.5363 4.24331 46.5423 4.25774 46.5449 4.27303C46.5476 4.28829 46.5467 4.30398 46.5423 4.31883V4.31621Z"
+                          fill="white" />
+                      </g>
+                    </g>
+                    <defs>
+                      <clipPath id="clip0_1_49403">
+                        <rect width="49" height="12" fill="white" />
+                      </clipPath>
+                    </defs>
+                  </svg>
+                </a>
+              </li>
+            </ul>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script>
+    AOS.init({
+      duration: 600,
+      once: true,
+    });
+  </script>
+</body>
+
+</html>

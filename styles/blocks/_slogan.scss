@@ -1,0 +1,55 @@
+@use '../helpers' as *;
+
+.slogan {
+    display: flex;
+    justify-content: end;
+
+    margin-bottom: fluid(160, 70);
+    
+    &__text {
+        @include fluid-text(120, 30);
+        position: relative;
+        text-transform: uppercase;
+
+    }
+
+    &__illustration {
+        position: absolute;
+        top: -95%; //-95%;
+        left: 32%; //32%;
+        width: fluid(174, 87);
+        height: fluid(144, 72);
+
+        @media (max-width: 1550px) {
+            top: fluid(-110, -160);
+        }
+
+        @include laptop {
+            top: fluid(-112, -120);
+            left: 30.5%;
+        }
+
+        @media (max-width: 1200px) {
+            top: fluid(-117, -110);
+        }
+
+        @include tablet {
+            top: fluid(-115, -100);
+            left: 42%;
+        }
+
+        @media (max-width: 900px) {
+            top: fluid(-110, -95);
+        }
+
+        @include mobile {
+            top: fluid(-110, -80);
+            left: 40%;
+        }
+
+        @include mobile-s {
+            top: -218%;
+            left: 40%;
+        }
+    }
+}

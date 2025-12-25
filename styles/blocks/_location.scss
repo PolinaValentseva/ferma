@@ -1,0 +1,38 @@
+@use '../helpers' as *;
+
+.location {
+    margin-bottom: rem(100);
+
+    &-inner {
+        display: flex;
+        column-gap: rem(100);
+        align-items: center;
+        justify-content: center;
+    }
+
+    &__body {
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    &__title {
+        margin-bottom: rem(20);
+    }
+
+    &__description {
+        
+
+        &-first {
+            max-width: rem(368);
+            color: var(--color-dark);
+            margin-bottom: rem(10);
+        }
+        
+        &-second {
+            max-width: rem(368);
+            color: var(--color-dark);
+            margin-bottom: rem(40);
+        }
+    }
+}

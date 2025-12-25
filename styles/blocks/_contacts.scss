@@ -1,0 +1,102 @@
+@use '../helpers' as *;
+
+
+.contacts {
+    margin-top: rem(75);
+    margin-bottom: rem(100);
+
+    &-inner {
+        display: flex;
+        justify-content: center;
+        column-gap: rem(170);
+    }
+
+    &__header {
+
+        &:last-child {
+            align-items: end;
+        }
+    }
+
+    &__title {
+        color: var(--color-dark);
+        margin-bottom: rem(15);
+    }
+
+    &__description {
+        color: var(--color-dark);
+        max-width: rem(330);
+        margin-bottom: rem(50);
+    }
+
+    &__qr-wrapper {
+        position: relative;
+        right: rem(-50);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__body {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            top: 0;
+            left: -30%;
+            width: rem(439);
+            height: rem(204);
+            background-image: url("../../images/contacts/contacts-decor.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        &-bg-img {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+        }
+
+        &-info-social {
+            position: absolute;
+            top: 40%;
+            left: 20%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(6);
+            transform: rotate(-3.64deg);
+
+            &-title {
+                font-weight: 400;
+                margin-bottom: rem(5);
+            }
+
+            &-link {
+                color: var(--color-dark);
+            }
+        }
+
+        &-info-hours {
+            position: absolute;
+            top: 30%;
+            right: 23%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            row-gap: rem(6);
+            transform: rotate(6deg);
+
+            &-title {
+                font-weight: 400;
+                margin-bottom: rem(5);
+            }
+
+            &-description {
+                color: var(--color-dark);
+            }
+        }
+
+    }
+}

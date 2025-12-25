@@ -1,0 +1,192 @@
+@use '../helpers' as *;
+
+.care {
+
+    &-inner {
+        position: relative;
+
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(40);
+
+        padding-left: rem(250);
+        margin-bottom: fluid(128, 70);
+
+        @include tablet {
+            padding-left: rem(25);
+        }
+
+        &::before {
+            position: absolute;
+
+            content: "";
+            top: -13%;
+            left: 0;
+            width: rem(277);
+            height: rem(943);
+
+            background-image: url(../../images/care/illustration-bereza.png);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @include tablet {
+                width: 0;
+                height: 0;
+            }
+        }
+
+        @include mobile {
+            row-gap: rem(0);
+        }
+
+        /*&::before {
+            position: absolute;
+
+            content: "";
+            top: -9%;
+            right: 2%;
+            width: rem(120);
+            height: rem(170);
+
+            background-image: url(../../images/care/illustration-petuh.svg);
+            background-size: contain;
+            background-repeat: no-repeat;
+
+            @include mobile {
+                width: rem(70);
+                height: rem(70);
+
+                top: -8%;
+            }
+        }*/
+    }
+
+    &__feature {
+        display: flex;
+        column-gap: rem(30);
+        align-items: center;
+
+        &-1 {
+            justify-content: space-between;
+            align-items: center;
+
+            @include mobile {
+                justify-content: center;
+            }
+        }
+
+        &-2 {
+            justify-content: end;
+
+            @include mobile {
+                flex-direction: column-reverse;
+            }
+        }
+    }
+
+    &__body {
+        max-width: rem(425);
+
+        @include mobile {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            max-width: 100%;
+        }
+    }
+
+    &__image-wrapper {
+        width: 100%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        
+        @include tablet {
+            padding-left: rem(130);
+        }
+
+        @media(max-width: 380px) {
+            padding-left: rem(100);
+        }
+
+        &-before {
+            position: relative;
+
+            &::before {
+                position: absolute;
+                
+                content: "";
+                bottom: -10%;
+                left: -54%;
+                width: rem(207);
+                height: rem(225);
+                
+                background-image: url(../../images/care/illustration-barashek.svg);
+                background-size: contain;
+                background-repeat: no-repeat;
+                z-index: -1;
+
+                @include mobile-s {
+                    left: fluid(-120, -150);
+                    width: rem(180);
+                    bottom: -20%;
+                }
+
+                @media(max-width: 420px) {
+                    bottom: -25%;
+                }
+
+                @media(max-width: 380px) {
+                    left: fluid(-80, -110);
+                    width: rem(150);
+                    bottom: -40%;
+                }
+            }
+        }
+    }
+
+    &__image-1 {
+        width: fluid(597, 200);
+        height: auto;
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__title {
+        margin-bottom: fluid(40, 20);
+
+        @include mobile {
+            text-align: center;
+            margin-bottom: rem(35);
+        }
+    }
+
+    &__list {
+
+        &-title {
+            font-size: rem(20);
+            text-transform: uppercase;
+            font-weight: 400;
+            margin-bottom: fluid(16, 8);
+            color: var(--color-dark);
+
+            &-accent {
+                font-family: var(--font-family-third);
+                font-size: rem(40);
+                color: var(--color-primary);
+            }
+        }
+
+        &-description {
+            color: var(--color-dark);
+            margin-bottom: fluid(32, 20);
+
+            @include mobile {
+                max-width: rem(550);
+                margin-bottom: rem(30);
+            }
+        }
+    }
+}

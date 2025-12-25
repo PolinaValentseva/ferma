@@ -1,0 +1,35 @@
+@use 'normalize';
+@use 'fonts';
+@use 'variables';
+@use 'utils';
+@use 'globals';
+
+@use 'blocks/logo';
+@use 'blocks/buttons';
+@use 'blocks/burger-button';
+@use 'blocks/header';
+@use 'blocks/hero';
+@use 'blocks/welcome';
+@use 'blocks/care';
+@use 'blocks/promo-banner';
+@use 'blocks/slogan';
+@use 'blocks/slider';
+@use 'blocks/transparency';
+@use 'blocks/footer';
+
+@use 'blocks/products-hero';
+@use 'blocks/tabs';
+
+@use 'blocks/about-hero';
+@use 'blocks/about-welcome';
+@use 'blocks/vision';
+@use 'blocks/mission';
+@use 'blocks/goodbye';
+
+@use 'blocks/overview';
+@use 'blocks/orders-status';
+
+@use 'blocks/cart';
+
+@use 'blocks/contacts';
+@use 'blocks/location';

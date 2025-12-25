@@ -1,0 +1,78 @@
+@use '../helpers' as *;
+
+.products-hero {
+
+    &__inner {
+        position: relative;
+        margin-top: fluid(48, 30);
+        margin-bottom: fluid(70, 30);
+    }
+
+    &__breadcrumbs-list {
+        display: flex;
+        align-items: center;
+        column-gap: rem(8);
+        color: var(--color);
+        margin-bottom: rem(24);
+    }
+
+    &__breadcrumbs-item {
+        @media (any-hover: hover) {
+           & a:hover {
+               color: var(--color-bg);
+           }
+        }
+    }
+
+    &__breadcrumbs-item-opacity {
+        color: var(--color-primary);
+        opacity: 0.6;
+
+        @include hover {
+            opacity: 1;
+            text-decoration: none;
+            border-bottom: none;
+        }
+    }
+
+    &__wrapper {
+        position: relative;
+
+        &::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background: rgba(0, 0, 0, 0.5);
+            pointer-events: none;
+            z-index: 1; 
+        }
+    }
+
+    &__image {
+        width: 100%;
+        height: 100%;
+    }
+
+    &__body {
+        @include abs-center();
+        max-width: rem(416);
+        color: var(--color-white);
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        z-index: 2;
+    }
+
+    &__subtitle {
+        @include fluid-text(16, 11);
+    }
+
+    &__title {
+        @include fluid-text(48, 22);
+        color: var(--color-white);
+        text-align: center;
+    }
+}

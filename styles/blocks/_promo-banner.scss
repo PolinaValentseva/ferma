@@ -1,0 +1,105 @@
+@use '../helpers' as *;
+
+.promo-banner {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    max-height: rem(560);
+    margin-bottom: fluid(450, 150);
+
+    @media (max-width: 1660px) {
+        margin-bottom: fluid(400, 0);
+    }
+
+    @include tablet {
+        margin-bottom: fluid(300, 150);
+    }
+
+    @include mobile {
+        grid-template-columns: 1fr;
+        grid-template-rows: auto auto;
+        max-height: 1000px;
+    }
+
+    &__body {
+        position: relative;
+
+        background-color: var(--color-gray);
+        color: var(--color-white);
+
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        padding-block: fluid(60, 28);
+
+        @include mobile {
+            justify-content: center;
+        }
+    }
+
+    &__illustration {
+        margin-bottom: fluid(30, 10);
+        width: fluid(89, 44);
+        height: fluid(126, 63);
+
+    }
+
+    &__title {
+        @include fluid-text(64, 30);
+        
+        font-family: var(--font-family-third);
+        color: var(--color-white);
+
+        margin-bottom: fluid(16, 5);
+    }
+
+    &__description {
+        @include fluid-text(20, 12);
+
+        max-width: rem(500);
+        padding-inline: rem(20);
+        text-align: center;
+        margin-bottom: fluid(48, 15);
+    }
+
+    &__image img{
+        display: block;
+        width: 100%;
+        height: 100%;
+        object-fit: cover;
+    }
+
+    &__image {
+        position: relative;
+
+        &-description {
+
+            @include fluid-text(14, 11);
+
+            position: absolute;
+            bottom: fluid(-90, -60);
+            left: fluid(60, 10);
+            max-width: rem(500);
+            padding-inline: rem(17);
+
+            text-transform: uppercase;
+
+            @media (max-width: 863px) {
+                bottom: fluid(-90, -80);
+            }
+
+            @media (max-width: 767px) {
+                bottom: fluid(-90, -60);
+            }
+            
+            &-accent {
+                @include fluid-text(140, 110);
+                font-family: var(--font-family-third);
+                color: var(--color-accent);
+
+                position: absolute;
+                top: fluid(60, 45);
+                left: fluid(-50, -20);
+            }
+        }
+    }
+}

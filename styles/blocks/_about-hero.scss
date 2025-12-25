@@ -1,0 +1,121 @@
+@use '../helpers' as *;
+
+.about-hero {
+    margin-top: fluid(100, 0);
+    margin-bottom: fluid(222, 100);
+
+    &-inner {
+        display: flex;
+        column-gap: rem(40);
+        justify-content: center;
+        
+        @include tablet {
+            align-items: center;
+        }
+
+        @include mobile {
+            flex-direction: column-reverse;
+        }
+    }
+
+    &__image {
+        @include tablet {
+            width: fluid(491, 291);
+            height: fluid(604, 404);
+        }
+
+        @include mobile {
+            display: none;
+        }
+    }
+
+    &__info {
+        position: relative;
+        margin-block: rem(35);
+
+        &::after {
+            position: absolute;
+
+            content: '';
+            top: 0;
+            right: 0;
+            width: fluid(74, 37);
+            height: fluid(74, 37);
+            background-image: url("../../images/about-hero/about-hero__illustrarion-top-right.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+        @include mobile {
+            max-width: rem(500);
+            width: 100%;
+
+        }
+    }
+
+    &__title-main {
+        margin-bottom: rem(15);
+    }
+
+    &__subtitle {
+        margin-bottom: fluid(90, 20);
+    }
+
+    &__title-child-wrapper {
+        position: relative;
+    }
+
+    &__title-child {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(5);
+        margin-left: fluid(300, 50);
+        margin-bottom: fluid(45, 20);
+        text-wrap: nowrap;
+
+        @include mobile {
+            margin-left: fluid(700, 150);
+        }
+
+        &-accent {
+            position: relative;
+            top: 100%;
+            left: rem(-50);
+
+            @media(max-width: 830px) {
+                left: rem(-30);
+            }
+        }
+
+        &::after {
+            position: absolute;
+
+            content: '';
+            top: 0;
+            left: -75%;
+            width: fluid(228, 114);
+            height: fluid(134, 67);
+            background-image: url("../../images/about-hero/about-hero__illustrarion-title.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @include tablet {
+                left: fluid(-200, -160);
+            }
+
+            @media(max-width: 830px) {
+                left: fluid(-150, -130);
+            }
+        }
+
+        @include tablet {
+            font-size: rem(30);
+        }
+    }
+
+    &__description {
+        max-width: rem(362);
+        color: var(--color-dark);
+    }
+}

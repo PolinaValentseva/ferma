@@ -1,0 +1,293 @@
+@use '../helpers' as *;
+
+.slider {
+    position: relative;
+    margin-bottom: fluid(160, 70);
+
+    &::after {
+        content: '';
+        position: absolute;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: 60%;
+        background-color: #d9c7bb;
+        z-index: -1;
+    }
+
+    &::before {
+        content: '';
+        position: absolute;
+        bottom: fluid(-90, -50);
+        left: 0;
+        width: fluid(260, 100);
+        height: fluid(260, 100);
+        background-image: url('../../images/slider/slider-illustrurion-flower.svg');
+        background-size: cover;
+        background-repeat: no-repeat;
+    }
+
+    &__header {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: fluid(40, 20);
+        max-width: rem(1234);
+        margin-left: fluid(230, 20);
+        padding-right: rem(25);
+    }
+
+    &__navigation {
+        display: flex;
+        align-items: end;
+        column-gap: fluid(20, 8);
+
+        &-custom-prev-btn {
+            @include square(fluid(32, 27));
+            $color-primary: #8f323a;
+            background-color: rgba($color-primary, 0.2);
+            border-radius: 50%;
+            color: var(--color-primary);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & svg {
+                @include square(fluid(16, 14));
+            }
+
+            @include hover {
+                border: rem(1) solid var(--color-primary);
+                background-color: rgba($color-primary, 0.1);
+            }
+
+            &:active {
+                transform: scale(0.95);
+                opacity: 0.9;
+            }
+        }
+
+        &-custom-next-btn {
+            @include square(fluid(32, 27));
+            $color-accent: #50735F;
+            background-color: rgba($color-accent, 0.2);
+            border-radius: 50%;
+            color: var(--color-accent);
+
+            display: flex;
+            align-items: center;
+            justify-content: center;
+
+            & svg {
+                @include square(fluid(16, 14));
+            }
+
+            @include hover {
+                border: rem(1) solid var(--color-accent);
+                background-color: rgba($color-accent, 0.1);
+            }
+
+            &:active {
+                transform: scale(0.95);
+                opacity: 0.9;
+            }
+        }
+
+    } 
+}
+
+.swiper {
+    padding-bottom: fluid(64, 40);
+    margin-left: fluid(230, 20);
+
+    &-wrapper {
+        margin-bottom: fluid(80, 50);
+    }
+
+    &-slide {
+        font-size: rem(14);
+        font-weight: 400;
+        //width: calc((100% - 60px) / 4);
+        width: fluid(380, 250);
+
+        & figure {
+            position: relative;
+            margin-bottom: fluid(16, 8);
+            overflow: hidden;
+        }
+
+        &__image {
+            height: fluid(380, 250);
+        }
+
+        &__overlay {
+            position: absolute;
+            bottom: var(--pos);
+            left: 0;
+            max-width: rem(380);
+            width: 100%;
+            height: 67%;
+            padding: rem(16);
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            $color-primary: #50735f;
+            background-color: rgba($color-primary, 0.8);
+            color: var(--color-white);
+            transition-duration: var(--transition-duration);
+
+            @media(max-width: 1300px) {
+                height: 80%;
+            }
+
+            @include tablet {
+                height: 100%;
+            }
+
+            &.is-active {
+                --pos: 0;
+            }
+        }
+
+        @include hover {
+            --pos: 0;
+        }
+
+        &__list {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(14);
+        }
+
+        &__item {
+            display: flex;
+            column-gap: rem(12);
+        }
+
+        &__product-image {
+            @include mobile {
+                width: fluid(68, 74) !important;
+                height: fluid(100, 90);
+            }
+        }
+
+        &__product-info {
+
+            & h3 {
+                padding: 0;
+                margin: 0;
+                margin-bottom: rem(4);
+                font-size: rem(14);
+                font-weight: 400;
+
+                @include mobile {
+                    margin-bottom: fluid(18, 0);
+                    margin-bottom: rem(8);
+                    line-height: 110%;
+                }
+            }
+
+            & data {
+                @include mobile {
+                    font-size: rem(14);
+                }
+            }
+        }
+
+        &__age-selector {
+            display: flex;
+            flex-wrap: wrap;
+            column-gap: rem(7);
+            max-width: rem(175);
+
+            &-wrapper {
+                display: flex;
+                column-gap: rem(11);
+                margin-bottom: rem(18);
+
+                & svg {
+                    @include mobile {
+                        display: none;
+                    }
+                }
+
+                @include mobile {
+                    margin-bottom: fluid(18, 0);
+                }
+            }
+        }
+
+        &__age-option {
+            
+            @include hover {
+                opacity: 0.7;
+            }
+
+            &:disabled {
+              opacity: 0.5;
+              cursor: default;
+              position: relative;
+
+              &::before {
+                content: '';
+                position: absolute;
+                top: 50%;
+                left: 0;
+                right: 0;
+                height: 1px;
+                background: var(--color-white);
+                z-index: 1;
+              }
+            }
+
+            &:focus {
+                color: #e6a256;
+            }
+
+            @include mobile {
+                    font-size: rem(12);
+                }
+        }
+
+        &__add-btn {
+            @include mobile {
+                font-size: rem(12);
+            }
+
+            @include hover {
+                opacity: 0.7;
+            }
+
+            &:active {
+                transform: scale(0.9);
+            }
+        }
+
+        &__link {
+            display: flex;
+            align-items: center;
+            column-gap: rem(8);
+            color: var(--color-primary);
+            text-transform: uppercase;
+        }
+    }
+
+    &__custom-progress-bar {
+        &-wrapper {
+            width: 100%;
+            display: flex;
+            justify-content: center;
+        }
+
+        height: rem(3);
+        width: fluid(460, 200);
+        $color-primary: #8f323a;
+        background-color: rgba($color-primary, 0.3);
+        transition: width 0.3s ease;
+    }
+}
+
+.swiper-scrollbar-drag {
+    background-color: var(--color-primary);
+}

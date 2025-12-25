@@ -1,0 +1,83 @@
+@use '../helpers' as *;
+
+.about-welcome {
+    margin-bottom: fluid(118, 70);
+
+    &-inner {
+        position: relative;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        max-width: rem(1280);
+
+        &::after {
+            position: absolute;
+
+            content: '';
+            top: -20%;
+            left: 3%;
+            width: fluid(74, 37);
+            height: fluid(74, 37);
+            background-image: url("../../images/about-welcome/about-welcome__illustration-top-left.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+
+
+
+        &::before {
+            position: absolute;
+
+            content: '';
+            bottom: -40%;
+            right: 5%;
+            width: fluid(155, 57);
+            height: fluid(155, 57);
+            background-image: url("../../images/about-welcome/about-welcome__illustration-bottom-right.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @include mobile {
+                bottom: -30%;
+            }
+        }
+    }
+
+    &__decorations-bg {
+        width: fluid(597, 497);
+        height: fluid(363, 263);
+    }
+
+    &__illustration-top-right {
+        position: absolute;
+        top: -60%;
+        right: 5%;
+        width: fluid(270, 150);
+        height: fluid(245, 125);
+
+        @include tablet {
+            top: -45%;
+        }
+
+        @include mobile {
+            top: -57%;
+        }
+    }
+
+    &__decorations-bg {
+
+        &-wrapper {
+            position: relative;
+        }
+    }
+
+    &__body {
+        @include abs-center;
+        @include fluid-text(20, 14);
+
+        transform: rotate(7deg);
+        max-width: rem(380);
+        color: var(--color-dark);
+        text-align: center;
+    }
+}

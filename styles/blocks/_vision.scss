@@ -1,0 +1,111 @@
+@use '../helpers' as *;
+
+.vision {
+    margin-bottom: rem(140);
+
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(70);
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem(30);
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(25);
+        text-wrap: nowrap;
+
+        @include mobile {
+            margin-bottom: rem(10);
+        }
+    }
+
+    &__subtitle-child {
+        max-width: rem(245);
+        line-height: 120%;
+
+        @include mobile {
+            max-width: rem(400);
+        }
+    }
+
+    &__description {
+        max-width: rem(430);
+        color: var(--color-dark);
+        margin-top: rem(61);
+
+        @include mobile {
+            max-width: rem(550);
+            margin-top: rem(25);
+        }
+
+        & p {
+            @include mobile {
+                margin-bottom: rem(10);
+
+                &:last-child {
+                    margin-bottom: rem(25);
+                }
+            }
+        }
+    }
+
+    &__extra {
+        display: flex;
+        align-items: center;
+        margin-top: auto;
+        column-gap: rem(8);
+        max-width: rem(190);
+        min-width: rem(190);
+        font-size: rem(15);
+        line-height: 110%;
+    }
+
+    &__gallery {
+
+        &-list {
+            display: flex;
+            column-gap: fluid(30, 10);
+        }
+
+        &-card {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background-color: var(--color-white);
+            padding: fluid(15, 5);
+            padding-bottom: fluid(18, 8);
+
+            &:nth-child(odd) {
+                transform: rotate(-4deg);
+            }
+
+            &:nth-child(even) {
+                transform: rotate(4deg);
+            }
+
+            
+        }
+
+        &-image {
+            margin-bottom: fluid(18, 8)
+        }
+
+        &-name {
+            @include fluid-text(24, 18);
+
+            font-family: var(--font-family-4);
+            color: var(--color-dark);
+        }
+    }
+}

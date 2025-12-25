@@ -1,0 +1,82 @@
+@use 'helpers' as *;
+
+html {
+  &.is-lock {
+    overflow: hidden;
+  }
+}
+
+body {
+  @include fluid-text(16, 14);
+
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-family);
+  line-height: 140%;
+  color: var(--color-primary);
+  background-color: var(--color-bg);
+  overflow-x: hidden;
+}
+
+main {
+  flex-grow: 1;
+}
+
+h1,
+h2 {
+  @include fluid-text(48, 30);
+  font-family: var(--font-family-accent);
+  font-weight: 400;
+  line-height: 100%;
+  color: var(--color-dark);
+}
+
+
+a,
+button {
+  line-height: 100%;
+  color: #fff;
+}
+
+
+a,
+button,
+label,
+input,
+textarea,
+select,
+svg * {
+  transition-duration: var(--transition-duration);
+}
+
+a {
+
+  @include hover {
+    color: var(--color-accent);
+  }
+
+  &[class] {
+    text-decoration: none;
+  }
+}
+
+:focus-visible {
+  outline: rem(2) dashed var(--color-light);
+  outline-offset: rem(4);
+  transition-duration: 0s !important;
+}
+
+a,
+button {
+  &[aria-label] {
+    position: relative;
+
+    &::before {
+      @include abs-center;
+      @include square(rem(44));
+
+      content: '';
+    }
+  }
+}

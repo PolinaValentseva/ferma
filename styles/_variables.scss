@@ -1,0 +1,31 @@
+@use 'helpers' as *;
+
+:root {
+  --color-primary: #8f323a;
+  --color-accent: #50735F;
+  --color-bg: #f4f3f0;
+  --color-white: #FFF;
+  --color-dark: #000;
+  --color-gray: #adbbc4;
+
+  --border-light: #{rem(1)} solid rgba(255, 255, 255, 0.5);
+
+  --font-family: "Manrope", sans-serif;
+  --font-family-accent: "Monomakh Unicode", sans-serif;
+  --font-family-second: "Shlapak Script", sans-serif;
+  --font-family-third: "Northwell", sans-serif;
+  --font-family-4: "Xarrovv", sans-serif;
+
+  --container-width: #{rem(1234)};
+  --container-padding-x: #{rem(25)};
+
+  --transition-duration: 0.2s;
+
+  --pos: -100%;
+
+  --100vw: calc(100vw - var(--scrollbar-width));
+
+  @include laptop {
+    --container-width: #{rem(1280)};
+  }
+}

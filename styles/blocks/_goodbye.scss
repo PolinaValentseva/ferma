@@ -1,0 +1,41 @@
+@use '../helpers' as *;
+
+.goodbye {
+
+    &-inner {
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+
+        &::after {
+            position: absolute;
+            content: '';
+            bottom: 5%;
+            right: 3%;
+            width: fluid(118, 88);
+            height: fluid(107, 77);
+            background-image: url("../../images/vision/goodbye-rabbit.png");
+            background-repeat: no-repeat;
+            background-size: contain;
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(20);
+    }
+
+    &__image {
+        margin-bottom: rem(20);
+    }
+
+    &__description {
+        @include fluid-text(36, 20);
+
+        color: var(--color-dark);
+        font-family: var(--font-family-second);
+        margin-bottom: fluid(200, 100);
+        text-align: center;
+        line-height: 120%;
+    }
+}

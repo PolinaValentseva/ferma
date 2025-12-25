@@ -1,0 +1,58 @@
+@use '../helpers' as *;
+
+.button {
+    display: flex;
+    max-height: rem(50);
+
+    @include hover {
+        .button__text,
+        .button__arrow {
+            transition-duration: var(--transition-duration);
+            background-color: var(--color-primary);
+            color: var(--color-white);
+        }
+    }
+
+    @include hover {
+        .button__text-accent,
+        .button__arrow-accent {
+            transition-duration: var(--transition-duration);
+            background-color: inherit;
+        }
+    }
+
+    &:active {
+        transform: scale(0.95);
+        opacity: 0.9;
+    }
+
+    &__text {
+        padding-block: fluid(16, 8);
+        padding-inline: fluid(46, 23);
+        border: rem(2) solid var(--color-primary);
+        border-radius: rem(80);
+        color: var(--color-primary);
+        text-transform: uppercase;
+
+        &-accent {
+            color: var(--color-white);
+            border: rem(2) solid var(--color-primary);
+            background-color: var(--color-primary);
+        }
+    }
+
+    &__arrow {
+        @include square(fluid(50, 34));
+        @include flex-center;
+        border: rem(2) solid var(--color-primary);
+        border-radius: 50%;
+        color: var(--color-primary);
+
+        &-accent {
+            color: var(--color-white);
+            border: rem(2) solid var(--color-primary);
+            background-color: var(--color-primary);
+        }
+    }
+}
+

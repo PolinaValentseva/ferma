@@ -1,0 +1,201 @@
+@use '../helpers' as *;
+
+.footer {
+    position: relative;
+    background-color: var(--color-primary);
+    padding-bottom: rem(120);
+
+    &::after {
+        position: absolute;
+
+        content: '';
+        bottom: 0;
+        left: 0;
+        width: 100%;
+        height: rem(145);
+        background-image: url("../../images/footer/illustration-pshenica.png");
+        background-repeat: no-repeat;
+        background-size: cover;
+    }
+
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        padding-block: fluid(44, 25);
+        color: var(--color-white);
+    }
+
+    &__body {
+        display: flex;
+        justify-content: space-between;
+        column-gap: rem(30);
+
+        @include tablet {
+            margin-bottom: rem(30);
+            flex-direction: column;
+            row-gap: rem(50);
+            align-items: center;
+        }
+    }
+
+    &__subscribe {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(20);
+
+        @include tablet {
+            align-items: center;
+        }
+
+        &-title {
+            max-width: rem(247);
+            font-weight: 400;
+            font-size: rem(14);
+            line-height: 130%;
+            text-transform: uppercase;
+
+            @include tablet {
+                text-align: center;
+            }
+        }
+
+        &-form {
+            display: flex;
+            width: fluid(450, 300);
+            height: fluid(54, 45);
+        }
+
+        &-input {
+            width: 100%;
+            background-color: inherit;
+            border: var(--border-light);
+            border-radius: rem(8) 0 0 rem(8);
+            padding: fluid(20, 10);
+            padding-right: rem(37);
+            color: var(--color-white);
+            font-size: rem(14);
+            
+            @include hover {
+                &:not(:focus) {
+                    opacity: 1;
+                    border-right-color: var(--color-accent);
+                }
+            }
+
+            &::placeholder {
+                color: var(--color-white);
+                font-size: rem(14);
+                opacity: 0.5;
+            }
+
+            &:not(:focus) {
+                opacity: 0.5;
+            }
+
+            &:focus {
+                border-right-color: var(--color-accent);
+            }
+        }
+
+        &-button {
+            background-color: var(--color-accent);
+            border: rem(1) solid var(--color-accent);
+            border-radius: 0 rem(8) rem(8) 0;
+            padding-block: fluid(20, 10);
+            padding-inline: fluid(47, 23);
+            font-size: rem(14);
+            line-height: 0;
+            text-transform: uppercase;
+            white-space: nowrap;
+
+            @include hover {
+                background-color: inherit;
+                border: rem(1) solid var(--color-accent);
+            }
+        }
+    }
+
+    &__menu {
+        display: flex;
+        gap: fluid(60, 20);
+        font-weight: 400;
+        flex-wrap: wrap;
+        justify-content: center;
+
+        @include mobile-s {
+            justify-content: space-around;
+            row-gap: rem(40);
+        }
+
+        &-title {
+            font-weight: 400;
+            font-size: rem(16);
+            text-transform: uppercase;
+            margin-bottom: fluid(24, 15);
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(12);
+            
+        }
+
+        &-link {
+
+            @include hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+
+    &__extra {
+        display: flex;
+        justify-content: space-between;
+        max-width: rem(450);
+
+        @include tablet {
+            margin-bottom: rem(20);
+        }
+
+        &-logo {
+            margin-bottom: rem(12);
+        }
+
+        &-button {
+            position: relative;
+            top: rem(-13);
+            left: rem(-20);
+            height: rem(47);
+            margin-block: auto;
+            display: flex;
+            align-items: center;
+            column-gap: rem(5);
+
+            @include mobile {
+                transform: scale(0.8);
+            }
+
+            &::before {
+                position: absolute;
+
+                content: '';
+                top: 50%;
+                left: 50%;
+                width: rem(62);
+                height: rem(47);
+                transform: translate(-50%, -50%) scale(1.2);
+                background: url('../../images/footer/Vector.svg') no-repeat center center;
+                background-size: contain;
+
+                @include mobile {
+                    transform: translate(-50%, -50%) scale(1.1);
+                }
+            }
+
+            @include hover {
+                color: var(--color-accent);
+            }
+        }
+    }
+}

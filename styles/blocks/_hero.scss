@@ -1,0 +1,157 @@
+@use '../helpers' as *;
+
+.hero {
+    position: relative;
+    height: calc(95.3vh - rem(80));
+    width: 100%;
+    margin-bottom: fluid(120, 70);
+
+    display: flex;
+    flex-direction: column;
+    justify-content: end;
+
+    @include tablet {
+        height: calc(70vh - rem(80));
+    }
+
+    @include mobile {
+        height: 50vh;
+    }
+
+    &__image-bg img{
+        height: 98vh;
+        width: 100%;
+
+        position: absolute;
+        top: rem(-95);
+        left: 0;
+
+        object-fit: cover;
+        object-position: left center;
+
+        z-index: 0;
+
+        @include tablet {
+            height: 70vh;
+        }
+
+        @include mobile {
+            height: 60vh;
+        }
+    }
+
+    &__image-bg::after {
+        content: '';
+        position: absolute;
+        top: rem(-95);
+        left: 0;
+        width: 100%;
+        height: 98vh;
+        background: rgba(0, 0, 0, 0.25);
+        pointer-events: none;
+        z-index: 1; 
+
+        @include tablet {
+            height: 70vh;
+        }
+
+        @include mobile {
+            height: 60vh;
+        }
+    }
+
+    &__body {
+        z-index: 10;
+        max-width: rem(690);
+        padding-right: rem(30);
+
+        position: absolute;
+        
+        top: 18%;
+        left: 25%;//49%;
+
+        color: var(--color-white);
+
+        @include tablet {
+            left: 18%;
+        }
+
+        @include mobile {
+            top: 12%;
+            left: 18%;
+        }
+
+    }
+
+    &__subtitle {
+        @include mobile-s {
+            font-size: rem(12);
+        }
+    }
+
+    &__description {
+        @include mobile-s {
+            font-size: rem(12);
+        }
+    }
+
+
+    &__title {
+        @include fluid-text(70, 22);
+        color: var(--color-white);
+        margin-bottom: fluid(20, 10);
+
+        &-span {
+            position: relative;
+            top: 100%;
+            left: rem(-106);
+
+            @include mobile {
+                left: rem(-50);
+            }
+        }
+    }
+    
+    &__description {
+        max-width: rem(500);
+        margin-bottom: fluid(48, 20);
+    }
+
+    &__button {
+        max-width: max-content;
+    }
+
+    &__extra {
+        z-index: 10;
+        position: relative;
+        
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: fluid(52, 20);
+
+        &-quote {
+            color: var(--color-white);
+            cursor: default;
+
+            @include mobile-s {
+                font-size: rem(12);
+            }
+        }
+
+        &-link {
+            display: flex;
+            column-gap: rem(4);
+            align-items: center;
+
+            @include mobile-s {
+                font-size: rem(12);
+            }
+        }
+
+        &-link svg{
+            height: rem(14);
+        }
+
+    }
+}

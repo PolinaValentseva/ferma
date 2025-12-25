@@ -1,0 +1,154 @@
+@use '../helpers' as *;
+
+.mission {
+    margin-bottom: rem(100);
+
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        row-gap: rem(82);
+
+        @include tablet {
+            row-gap: rem(10);
+        }
+    }
+
+    &__header {
+        position: relative;
+
+        &-images-wrapper {
+            position: absolute;
+            top: 0;
+            right: 5%;
+
+            @include tablet {
+                position: relative;
+            }
+        }
+
+        @include tablet {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+
+        &-body {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        &-image-main {
+            width: fluid(319, 269);
+            height: fluid(360, 310);
+
+            @include mobile {
+                display: none;
+            }
+        }
+
+        &-image-child {
+            position: absolute;
+            bottom: -30%;
+            right: -20%;
+            width: fluid(199, 149);
+            height: fluid(266, 260);
+
+            @include tablet {
+                display: none;
+            }
+        }
+    }
+
+    &__title {
+        margin-bottom: rem(24);
+    }
+
+    &__subtitle-child {
+        max-width: rem(381);
+    }
+
+    &__description {
+        color: var(--color-dark);
+        max-width: rem(381);
+
+        @include mobile {
+            max-width: rem(500);
+            margin-bottom: rem(24);
+        }
+    }
+
+    &__body {
+        display: flex;
+        column-gap: fluid(130, 50);
+        align-items: center;
+
+        &-image {
+            width: fluid(383, 283);
+            height: fluid(479, 379);
+        }
+
+        @include mobile {
+            flex-direction: column;
+            align-items: center;
+            text-align: center;
+        }
+    }
+
+    &__missions {
+        position: relative;
+
+        &::before {
+            position: absolute;
+            content: '';
+            bottom: 0;
+            right: -45%;
+            width: fluid(124, 94);
+            height: fluid(163, 133);
+            background-image: url("../../images/mission/mission-illustration-zayac.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+
+            @include tablet {
+                display: none;
+            }
+        }
+
+        &-subtitle {
+            max-width: rem(228);
+            font-size: rem(20);
+            line-height: 120%;
+            margin-bottom: rem(28);
+        }
+
+        &-list {
+            display: flex;
+            flex-direction: column;
+            row-gap: rem(30);
+            margin-bottom: rem(50);
+        }
+
+        &-item {
+            color: var(--color-dark);
+
+            &-accent {
+                font-family: var(--font-family-third);
+                font-size: rem(40);
+                color: var(--color-primary);
+                margin-right: rem(10);
+            }
+        }
+
+        &-extra {
+            @include fluid-text(55, 30);
+            font-family: var(--font-family-second);
+        }
+        
+    }
+    
+}
