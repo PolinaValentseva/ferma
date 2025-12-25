@@ -679,7 +679,7 @@ button[aria-label]::before {
   left: -10%;
   width: 1.75rem;
   height: 1.1875rem;
-  background-image: url("../../images/header-decor-left.svg");
+  background-image: url("../images/header-decor-left.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -690,7 +690,7 @@ button[aria-label]::before {
   right: -10%;
   width: 1.75rem;
   height: 1.1875rem;
-  background-image: url("../../images/header-decor-left.svg");
+  background-image: url("../images/header-decor-left.svg");
   background-repeat: no-repeat;
   background-size: contain;
   transform: rotate(180deg);
@@ -1004,7 +1004,7 @@ button[aria-label]::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../images/welcome/image-decor-top-small.png");
+  background-image: url("../images/welcome/image-decor-top-small.png");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
@@ -1037,7 +1037,7 @@ button[aria-label]::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../images/welcome/image-decor-top-small.png");
+  background-image: url("../images/welcome/image-decor-top-small.png");
   background-size: contain;
   background-repeat: no-repeat;
   z-index: 1;
@@ -1528,7 +1528,7 @@ button[aria-label]::before {
   left: 0;
   width: clamp(6.25rem, 3.0268595041rem + 13.2231404959vw, 16.25rem);
   height: clamp(6.25rem, 3.0268595041rem + 13.2231404959vw, 16.25rem);
-  background-image: url("../../images/slider/slider-illustrurion-flower.svg");
+  background-image: url("../images/slider/slider-illustrurion-flower.svg");
   background-size: cover;
   background-repeat: no-repeat;
 }
@@ -1808,7 +1808,7 @@ button[aria-label]::before {
   left: 0;
   width: 100%;
   height: 100%;
-  background-image: url("../../images/transparency/transparency-illustration-kite.svg");
+  background-image: url("../images/transparency/transparency-illustration-kite.svg");
   background-size: contain;
   background-position: center;
   background-repeat: no-repeat;
@@ -1869,7 +1869,7 @@ button[aria-label]::before {
   left: 0;
   width: 100%;
   height: 9.0625rem;
-  background-image: url("../../images/footer/illustration-pshenica.png");
+  background-image: url("../images/footer/illustration-pshenica.png");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -2045,7 +2045,7 @@ button[aria-label]::before {
   width: 3.875rem;
   height: 2.9375rem;
   transform: translate(-50%, -50%) scale(1.2);
-  background: url("../../images/footer/Vector.svg") no-repeat center center;
+  background: url("../images/footer/Vector.svg") no-repeat center center;
   background-size: contain;
 }
 @media (width <= 47.99875rem) {
@@ -2279,7 +2279,7 @@ button[aria-label]::before {
   transform: translate(-50%, -50%) scale(2.7);
   width: 100%;
   height: 100%;
-  background: url("../../images/tabs/custom-border.svg") no-repeat center center;
+  background: url("../images/tabs/custom-border.svg") no-repeat center center;
   background-size: contain;
   pointer-events: none;
 }
@@ -2465,7 +2465,7 @@ button[aria-label]::before {
   right: 0;
   width: clamp(2.3125rem, 1.5671487603rem + 3.0578512397vw, 4.625rem);
   height: clamp(2.3125rem, 1.5671487603rem + 3.0578512397vw, 4.625rem);
-  background-image: url("../../images/about-hero/about-hero__illustrarion-top-right.svg");
+  background-image: url("../images/about-hero/about-hero__illustrarion-top-right.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2515,7 +2515,7 @@ button[aria-label]::before {
   left: -75%;
   width: clamp(7.125rem, 4.8285123967rem + 9.4214876033vw, 14.25rem);
   height: clamp(4.1875rem, 2.8378099174rem + 5.5371900826vw, 8.375rem);
-  background-image: url("../../images/about-hero/about-hero__illustrarion-title.svg");
+  background-image: url("../images/about-hero/about-hero__illustrarion-title.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2556,7 +2556,7 @@ button[aria-label]::before {
   left: 3%;
   width: clamp(2.3125rem, 1.5671487603rem + 3.0578512397vw, 4.625rem);
   height: clamp(2.3125rem, 1.5671487603rem + 3.0578512397vw, 4.625rem);
-  background-image: url("../../images/about-welcome/about-welcome__illustration-top-left.svg");
+  background-image: url("../images/about-welcome/about-welcome__illustration-top-left.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2567,7 +2567,7 @@ button[aria-label]::before {
   right: 5%;
   width: clamp(3.5625rem, 1.5883264463rem + 8.0991735537vw, 9.6875rem);
   height: clamp(3.5625rem, 1.5883264463rem + 8.0991735537vw, 9.6875rem);
-  background-image: url("../../images/about-welcome/about-welcome__illustration-bottom-right.svg");
+  background-image: url("../images/about-welcome/about-welcome__illustration-bottom-right.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2813,7 +2813,7 @@ button[aria-label]::before {
   right: -45%;
   width: clamp(5.875rem, 5.270661157rem + 2.479338843vw, 7.75rem);
   height: clamp(8.3125rem, 7.708161157rem + 2.479338843vw, 10.1875rem);
-  background-image: url("../../images/mission/mission-illustration-zayac.svg");
+  background-image: url("../images/mission/mission-illustration-zayac.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -2861,7 +2861,7 @@ button[aria-label]::before {
   right: 3%;
   width: clamp(5.5rem, 4.895661157rem + 2.479338843vw, 7.375rem);
   height: clamp(4.8125rem, 4.208161157rem + 2.479338843vw, 6.6875rem);
-  background-image: url("../../images/vision/goodbye-rabbit.png");
+  background-image: url("../images/vision/goodbye-rabbit.png");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -3057,7 +3057,7 @@ button[aria-label]::before {
   right: 0%;
   width: 30.3125rem;
   height: 28.75rem;
-  background-image: url("../../images/orders-status/decor.svg");
+  background-image: url("../images/orders-status/decor.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
@@ -3411,7 +3411,7 @@ button[aria-label]::before {
   left: -30%;
   width: 27.4375rem;
   height: 12.75rem;
-  background-image: url("../../images/contacts/contacts-decor.svg");
+  background-image: url("../images/contacts/contacts-decor.svg");
   background-repeat: no-repeat;
   background-size: contain;
 }
