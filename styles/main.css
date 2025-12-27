@@ -240,6 +240,13 @@ figure {
   font-display: swap;
 }
 @font-face {
+  font-family: "Manrope";
+  src: url("../fonts/Manrope-Medium.woff2") format("woff2");
+  font-weight: 500;
+  font-style: medium;
+  font-display: swap;
+}
+@font-face {
   font-family: "Northwell";
   src: url("../fonts/Northwell.woff2") format("woff2");
   font-weight: 400;
@@ -577,20 +584,16 @@ button[aria-label]::before {
   transition: all 0.3s ease;
 }
 .header-scrolled {
-  transform: translateY(-33%);
   box-shadow: 0 0 1rem 0 black;
   background-color: var(--color-primary);
 }
-@media (width <= 47.99875rem) {
-  .header-scrolled {
-    transform: translateY(-40%);
-  }
+.header-scrolled .header__promo {
+  display: none;
 }
 .header__products {
   background-color: var(--color-primary);
 }
 .header__products.header-scrolled {
-  transform: translateY(-1%);
   box-shadow: 0 0 1rem 0 black;
   background-color: var(--color-primary);
 }
@@ -635,6 +638,7 @@ button[aria-label]::before {
   }
 }
 .header__body-inner {
+  position: relative;
   padding-block: 0.625rem;
   display: flex;
   justify-content: space-between;
@@ -661,12 +665,12 @@ button[aria-label]::before {
     justify-content: center;
     background-color: var(--color-primary);
     transition-duration: var(--transition-duration);
-    z-index: 1;
+    z-index: 10;
   }
   .header__overlay:not(.is-active) {
     opacity: 0;
     visibility: hidden;
-    translate: 100%;
+    transform: translateX(100%);
   }
 }
 .header__menu {
@@ -1212,28 +1216,6 @@ button[aria-label]::before {
     row-gap: 0rem;
   }
 }
-.care-inner {
-  /*&::before {
-      position: absolute;
-
-      content: "";
-      top: -9%;
-      right: 2%;
-      width: rem(120);
-      height: rem(170);
-
-      background-image: url(../../images/care/illustration-petuh.svg);
-      background-size: contain;
-      background-repeat: no-repeat;
-
-      @include mobile {
-          width: rem(70);
-          height: rem(70);
-
-          top: -8%;
-      }
-  }*/
-}
 .care__feature {
   display: flex;
   column-gap: 1.875rem;
@@ -1293,7 +1275,7 @@ button[aria-label]::before {
   left: -54%;
   width: 12.9375rem;
   height: 14.0625rem;
-  background-image: url(../../images/care/illustration-barashek.svg);
+  background-image: url(../images/care/illustration-barashek.svg);
   background-size: contain;
   background-repeat: no-repeat;
   z-index: -1;
@@ -1336,15 +1318,15 @@ button[aria-label]::before {
   }
 }
 .care__list-title {
-  font-size: 1.25rem;
+  font-size: clamp(1rem, 0.9194214876rem + 0.3305785124vw, 1.25rem);
   text-transform: uppercase;
   font-weight: 400;
   margin-bottom: clamp(0.5rem, 0.3388429752rem + 0.6611570248vw, 1rem);
   color: var(--color-dark);
 }
 .care__list-title-accent {
+  font-size: clamp(1.875rem, 1.673553719rem + 0.826446281vw, 2.5rem);
   font-family: var(--font-family-third);
-  font-size: 2.5rem;
   color: var(--color-primary);
 }
 .care__list-description {
@@ -3483,6 +3465,144 @@ button[aria-label]::before {
   max-width: 23rem;
   color: var(--color-dark);
   margin-bottom: 2.5rem;
+}
+
+.faq-header {
+  margin-top: clamp(1.875rem, 1.270661157rem + 2.479338843vw, 3.75rem);
+  margin-bottom: clamp(1.875rem, 1.270661157rem + 2.479338843vw, 3.75rem);
+}
+.faq-header-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faq-header__subtitle {
+  margin-bottom: clamp(0.625rem, 0.4638429752rem + 0.6611570248vw, 1.125rem);
+}
+.faq-header__title {
+  margin-bottom: clamp(1.25rem, 0.847107438rem + 1.652892562vw, 2.5rem);
+}
+
+.faq {
+  margin-bottom: clamp(3.125rem, 2.117768595rem + 4.132231405vw, 6.25rem);
+}
+.faq-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.faq__title {
+  font-size: clamp(1.25rem, 1.0082644628rem + 0.9917355372vw, 2rem);
+  max-width: 41.25rem;
+  text-align: center;
+  margin-bottom: clamp(1.25rem, 1.048553719rem + 0.826446281vw, 1.875rem);
+}
+.faq__body {
+  width: 100%;
+  max-width: 50.625rem;
+  margin-bottom: clamp(3.125rem, 2.319214876rem + 3.305785124vw, 5.625rem);
+}
+.faq__item {
+  padding-block: clamp(1rem, 0.6776859504rem + 1.3223140496vw, 2rem);
+  padding-inline: 0.3125rem;
+  border-top: 0.0625rem solid rgba(143, 50, 58, 0.5);
+}
+.faq__item:last-child {
+  border-bottom: 0.0625rem solid rgba(143, 50, 58, 0.5);
+}
+.faq__accordion .faq__accordion-indicator {
+  position: relative;
+}
+.faq__accordion .faq__accordion-indicator::after {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  position: absolute;
+  content: "";
+  top: 0.125rem;
+  width: 1.75rem;
+  height: 0.25rem;
+  background-image: url("../images/faq/faq-indicator.svg");
+  background-repeat: no-repeat;
+  background-size: contain;
+  transform: rotate(90deg);
+  transition: var(--transition-duration);
+}
+@media (width <= 47.99875rem) {
+  .faq__accordion .faq__accordion-indicator::after {
+    width: 1.5rem;
+    left: 47%;
+  }
+}
+.faq__accordion[open] .faq__accordion-indicator::after {
+  transform: rotate(0deg);
+}
+.faq__accordion-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  column-gap: 3.125rem;
+  cursor: pointer;
+  user-select: none;
+}
+@media (any-hover: hover) {
+  .faq__accordion-header:hover {
+    color: var(--color-accent);
+    transition-duration: var(--transition-duration);
+  }
+}
+@media (any-hover: none) {
+  .faq__accordion-header:active {
+    color: var(--color-accent);
+    transition-duration: var(--transition-duration);
+  }
+}
+.faq__accordion-title {
+  font-size: clamp(1rem, 0.9597107438rem + 0.1652892562vw, 1.125rem);
+  text-transform: uppercase;
+  font-weight: 500;
+}
+.faq__accordion-indicator {
+  position: relative;
+  color: var(--color-accent);
+  height: 0.25rem;
+}
+.faq__accordion-indicator::before {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  translate: -50% -50%;
+  width: 2.75rem;
+  height: 2.75rem;
+  top: 0;
+  content: "";
+}
+.faq__accordion-indicator svg {
+  width: 1.75rem;
+  height: 0.25rem;
+}
+@media (width <= 47.99875rem) {
+  .faq__accordion-indicator svg {
+    width: 1.5rem;
+  }
+}
+.faq__accordion-body {
+  position: relative;
+  max-width: 36.25rem;
+  color: var(--color-dark);
+  margin-top: clamp(0.75rem, 0.5082644628rem + 0.9917355372vw, 1.5rem);
+}
+.faq__accordion-body::before {
+  position: absolute;
+  content: "•";
+  left: 0;
+  top: 0;
+  color: var(--color-primary);
+  font-size: 1.2em;
+}
+.faq__accordion-body p {
+  margin-left: 1.25rem;
 }
 
 /*# sourceMappingURL=main.css.map */

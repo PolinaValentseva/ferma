@@ -38,27 +38,6 @@
         @include mobile {
             row-gap: rem(0);
         }
-
-        /*&::before {
-            position: absolute;
-
-            content: "";
-            top: -9%;
-            right: 2%;
-            width: rem(120);
-            height: rem(170);
-
-            background-image: url(../../images/care/illustration-petuh.svg);
-            background-size: contain;
-            background-repeat: no-repeat;
-
-            @include mobile {
-                width: rem(70);
-                height: rem(70);
-
-                top: -8%;
-            }
-        }*/
     }
 
     &__feature {
@@ -121,7 +100,7 @@
                 width: rem(207);
                 height: rem(225);
                 
-                background-image: url(../../images/care/illustration-barashek.svg);
+                background-image: url(../images/care/illustration-barashek.svg);
                 background-size: contain;
                 background-repeat: no-repeat;
                 z-index: -1;
@@ -166,15 +145,17 @@
     &__list {
 
         &-title {
-            font-size: rem(20);
+            @include fluid-text(20, 16);
+
             text-transform: uppercase;
             font-weight: 400;
             margin-bottom: fluid(16, 8);
             color: var(--color-dark);
 
             &-accent {
+                @include fluid-text(40, 30);
+
                 font-family: var(--font-family-third);
-                font-size: rem(40);
                 color: var(--color-primary);
             }
         }

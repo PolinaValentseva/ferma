@@ -30,6 +30,10 @@ class Header {
     this.burgerButtonElement.classList.toggle(this.stateClass.isActive);
     this.overlayElement.classList.toggle(this.stateClass.isActive);
     document.documentElement.classList.toggle(this.stateClass.isLock);
+
+    if (isActive) {
+    this.rootElement.classList.remove(this.stateClass.isScrolled);
+  }
   };
 
   // Обновление состояния шапки при скролле

@@ -1,0 +1,139 @@
+@use '../helpers' as *;
+
+.faq {
+    margin-bottom: fluid(100, 50);
+    
+    &-inner {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    &__title {
+        @include fluid-text(32, 20);
+
+        max-width: rem(660);
+        text-align: center;
+        margin-bottom: fluid(30, 20);
+    }
+
+    &__body {
+        width: 100%;
+        max-width: rem(810);
+        margin-bottom: fluid(90, 50);
+    }
+
+    &__item {
+        padding-block: fluid(32, 16);
+        padding-inline: rem(5);
+        $color-primary: #8f323a;
+        border-top: rem(1) solid rgba($color-primary, 0.5);
+
+        &:last-child {
+            $color-primary: #8f323a;
+            border-bottom: rem(1) solid rgba($color-primary, 0.5);
+        }
+
+    }
+
+    &__accordion {
+
+        .faq__accordion-indicator {
+          position: relative;
+
+          &::after {
+            @include abs-center;
+            position: absolute;
+            content: '';
+            top: rem(2);
+            width: rem(28);
+            height: rem(4);
+            background-image: url("../images/faq/faq-indicator.svg");
+            background-repeat: no-repeat;
+            background-size: contain;
+            transform: rotate(90deg);
+            //opacity: 1;
+            transition: var(--transition-duration);
+
+            @include mobile {
+                width: rem(24);
+                left: 47%;
+            }
+          }
+        }
+    
+        // Показать псевдоэлемент, только если <details> имеет атрибут open
+        &[open] {
+          .faq__accordion-indicator::after {
+            //opacity: 0;
+            transform: rotate(0deg);
+          }
+        }
+
+        &-header {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            column-gap: rem(50);
+            cursor: pointer;
+            user-select: none;
+
+            @include hover {
+                color: var(--color-accent);
+                transition-duration: var(--transition-duration);
+            }
+        }
+
+        &-title {
+            @include fluid-text(18, 16);
+
+            text-transform: uppercase;
+            font-weight: 500;
+            //margin-bottom: fluid(24, 12);
+        }
+
+        &-indicator {
+            position: relative;
+            color: var(--color-accent);
+            height: rem(4);
+
+            &::before {
+              @include abs-center;
+              @include square(rem(44));
+              top: 0;
+            
+              content: '';
+            }
+
+            & svg {
+                width: rem(28);
+                height: rem(4);
+
+                @include mobile {
+                    width: rem(24);
+                }
+            }
+        }
+
+        &-body {
+            position: relative;
+            max-width: rem(580);
+            color: var(--color-dark);
+            margin-top: fluid(24, 12);
+
+            &::before {
+                position: absolute;
+                content: "•";
+                left: 0;
+                top: 0;
+                color: var(--color-primary);
+                font-size: 1.2em;
+            }
+
+            & p {
+
+                margin-left: rem(20);
+            }
+        }
+    }
+}

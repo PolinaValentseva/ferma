@@ -7,12 +7,16 @@
     transition: all 0.3s ease;
 
     &-scrolled {
-      transform: translateY(-33%);
+      //transform: translateY(-33%);
       box-shadow: 0 0 1rem 0 black;
       background-color: var(--color-primary);
 
-      @include mobile {
-        transform: translateY(-40%);
+      //@include mobile {
+      //  transform: translateY(-40%);
+      //}
+
+      .header__promo {
+        display: none;
       }
     }
 
@@ -20,7 +24,7 @@
       background-color: var(--color-primary);
 
       &.header-scrolled {
-        transform: translateY(-1%);
+        //transform: translateY(-1%);
         box-shadow: 0 0 1rem 0 black;
         background-color: var(--color-primary);
       }
@@ -72,6 +76,7 @@
     &__body {
 
       &-inner {
+        position: relative;
         padding-block: rem(10);
         display: flex;
         justify-content: space-between;
@@ -85,26 +90,26 @@
     }
 
     &__overlay {
-        @include tablet-above {
-            display: contents;
-        }
+      @include tablet-above {
+          display: contents;
+      }
+      @include tablet {
+          position: fixed;
+          inset: 0;
+          display: flex;
+          flex-direction: column;
+          justify-content: center;
+          background-color: var(--color-primary);
+          transition-duration: var(--transition-duration);
+          z-index: 10;
 
-        @include tablet {
-            position: fixed;
-            inset: 0;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            background-color: var(--color-primary);
-            transition-duration: var(--transition-duration);
-            z-index: 1;
+          &:not(.is-active) {
+            @include hide;
+          
+            transform: translateX(100%);
+          }
 
-            &:not(.is-active) {
-              @include hide;
-            
-              translate: 100%;
-            }
-        }
+      }
     }
 
     &__menu {
